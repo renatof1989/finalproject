@@ -1,44 +1,38 @@
 import React from "react";
+import NavBar from "./navbar.jsx";
 
 export class Home extends React.Component{
     render(){
         return(<div>
-            <div>
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-                    <a class="navbar-brand" href="#">Carousel</a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-        
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
-                            </li>
-                        </ul>
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                        </form>
-                    </div>
-                </nav>
-            </div>
-            <div>
-                <footer class="fixed-bottom container border-top">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-8">© 2017-2018 Company, Inc. · Privacy · Terms</div>
-                            <div class="col-4">Back to Top</div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
+            <h1> This home is now clear </h1>
+            <NavBar />
+
+            <Card image="..." header="Header" text="Eat My Shorts"/>
         </div>);
+    }
+}
+
+class Card extends React.Component {
+    
+    constructor(props) {
+        super();
+        this.state = {
+            image: props.img,
+            header: props.head,
+            body: props.text
+        };
+    }
+    
+    render() {
+        return (
+            <div className="card col-lg-4">
+                <img className="card-img-top" src={this.state.image} />
+                <div className="card-body">
+                    <h2>{this.state.header}</h2>
+                    <p>{this.state.body}</p>
+                </div>
+                <a className="btn btn-secondary" href="/blog" role="button">View Details</a>
+            </div>
+        );
     }
 }
