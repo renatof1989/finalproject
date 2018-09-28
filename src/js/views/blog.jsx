@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Jumbotron from '../component/jumbotron.jsx';
+import Jumbotron from '../component/jumbotronblog.jsx';
 import Featurepost from '../component/featuredpost.jsx';
 
 export class Blog extends React.Component{
@@ -13,6 +13,7 @@ export class Blog extends React.Component{
           </div>
           </div>
           <div className="row">
+                  <div className="col-12">
         <div className="col-12">
         <div className="col-6">
             <Featurepost />
