@@ -14,12 +14,13 @@ export class Blog extends React.Component{
           </div>
           <div className="row">
                   <div className="col-12">
-        <div className="col-12">
+        <div className="row">
         <div className="col-6">
             <Featurepost />
         </div>
         <div className="col-6">
             <Featurepost />
+        </div>
         </div>
         </div>
         </div>
