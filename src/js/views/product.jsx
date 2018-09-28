@@ -4,6 +4,8 @@ import Products from '../component/products.jsx'
 
 import Jumbotron from '../component/jumbotron.jsx'
 
+import '../../styles/product.scss';
+
 export class Product extends React.Component{
     render(){
         return(
