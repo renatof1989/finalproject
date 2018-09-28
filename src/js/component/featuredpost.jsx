@@ -11,7 +11,7 @@ export default class Featurepost extends React.Component {
             <div class="card-block px-2">
             <h4 class="card-title">Title</h4>
             <p class="card-text">Description</p>
-            <a href="#" class="btn btn-primary">BUTTON</a>
+            <a href="" class="btn btn-primary">BUTTON</a>
             </div>
             <div class="w-100"></div>
             <div class="card-footer w-100 text-muted">
