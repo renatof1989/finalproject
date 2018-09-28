@@ -9,7 +9,9 @@ export class Blog extends React.Component{
       <div>
         <div className="row">
         <div className="jumbotron">
+        <div className="col-6">
           <Jumbotron />
+          </div>
           </div>
           </div>
           <div className="row">
