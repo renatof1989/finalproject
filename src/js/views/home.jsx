@@ -8,8 +8,7 @@ export class Home extends React.Component{
         return(<div>
             <h1> This home is now clear </h1>
             <NavBar />
-
-            <Card image="..." header="Header" text="Eat My Shorts"/>
+            
         </div>);
     }
 }
