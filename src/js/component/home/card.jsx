@@ -1,26 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export class Card extends React.Component {
+export function Card(props) {
     
-    constructor(props) {
-        super();
-        this.state = {
-            image: props.img,
-            header: props.head,
-            body: props.text
-        };
-    }
-    
-    render() {
-        return (
-            <div className="card col-lg-4">
-                <img className="card-img-top" src={this.state.image} alt=""/>
-                <div className="card-body">
-                    <h2>{this.state.header}</h2>
-                    <p>{this.state.body}</p>
-                </div>
-                <a className="btn btn-secondary" href="/blog" role="button">View Details</a>
+    return (
+        <div className="card col-lg-4">
+            <img className="rounded-circle" src={props.image} alt="" width="140px" height="140px"/>
+            <div className="card-body">
+                <h2>{props.header}</h2>
+                <p>{props.body}</p>
             </div>
-        );
-    }
+            <a className="btn btn-secondary" href="/blog" role="button">View Details</a>
+        </div>
+    );
 }
+Card.propTypes = {
+    image: PropTypes.string,
+    header: PropTypes.string,
+    body: PropTypes.string
+}
+
+export default Card;
