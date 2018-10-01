@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 export function CarouselItem(props) {
     return (
         <div className={"carousel-item " + props.isActive}>
-            <img className={props.whichSilde + "-slide"} src={props.image} alt="Generic slide"></img>
+            <img className="d-block w-100" src={props.image} alt={props.whichSilde + "-slide"}></img>
             <div className="container">
                 <div className={"carousel-caption " + props.textDirection}>
                     <h1>{props.header}</h1>

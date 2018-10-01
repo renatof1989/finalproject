@@ -1,6 +1,6 @@
 import React from "react";
 
-function Jumbotron () {
+function Banner () {
    return (
        <div className="jumbotron jumbotron-fluid text-center mt-1">
            <div className="container">
@@ -15,5 +15,5 @@ function Jumbotron () {
    );
 }
 
-export default Jumbotron;
+export default Banner;
 
