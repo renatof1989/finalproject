@@ -121,6 +121,14 @@ const getState = (scope) => {
                 email: 'rigocodes@gmail.com'
                 
                 }
+            ],
+            cart:[
+                {
+                product:'Leica Camera',
+                description:'Take better photos than an iPhone with this modern camera',
+                price: 150.99
+                
+                }
             ]
         }
     };
