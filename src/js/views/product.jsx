@@ -6,7 +6,6 @@ import Jumbotron from '../component/jumbotron.jsx'
 
 import '../../styles/product.css';
 
-import PropTypes from 'prop-types';
 
 export class Product extends React.Component{
     
