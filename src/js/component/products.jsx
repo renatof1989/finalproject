@@ -1,12 +1,25 @@
 import React from 'react';
 
-function Products () {
+import PropTypes from 'prop-types';
+
+  Products.propTypes = {
+    backgroundColor: PropTypes.string,
+    productColor: PropTypes.string,
+    price: PropTypes.number,
+    fontColor: PropTypes.string,
+    productDescription: PropTypes.string
+};
+    
+
+function Products (props) {
+    
    return (
-        <div className="cards bg-dark text-white xs-col-12 col-6 m-1 text-center">
-           <h2 className="pt-5">Another headline</h2>
-           <p1 className="pb-4">And an even wittier subheading</p1>
-           <div id="product1" className="align-content-end card bg-white col-9 mx-auto">
-               <button id="purchase" type="button" className="btn btn-dark btn-lg">Add to cart</button>
+        <div className={`cards bg-${props.backgroundColor} text-${props.fontColor} col-xs-12 col-lg-6 text-center`}>
+           <h2 className={`pt-5 text-${props.fontColor}`}>{`Product ${props.productColor}`}</h2>
+           <p className={`pb-4 text-${props.fontColor}`}>{props.productDescription}</p>
+           <h3 className="mb-1">{`$${props.price}`}</h3> 
+           <div id="product1" className={`card bg-${props.productColor}  col-9`}>
+               <button id="purchase" type="button" className={`btn btn-${props.fontColor} text-${props.backgroundColor} pb-2 btn-lg border-${props.backgroundColor}`}>Add to cart</button>
            </div>
        </div>
 
