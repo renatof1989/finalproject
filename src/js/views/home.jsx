@@ -12,7 +12,7 @@ export class Home extends React.Component{
         return(
             <div>
                 <NavBar />
-    
+
                 <Carousel />
                 <Footer />
             </div>
