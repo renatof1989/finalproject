@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 export default class NavBar extends Component{
     render(){
-        return(<div>
+        return(
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
                     <a className="navbar-brand" name = "top" href="/">Carousel</a>
@@ -29,6 +29,6 @@ export default class NavBar extends Component{
                     </div>
                 </nav>
             </div>
-        </div>);
+        );
     }
 }
