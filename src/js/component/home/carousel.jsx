@@ -15,7 +15,7 @@ export function Carousel() {
                 <div className="carousel-inner">
                     <CarouselItem isActive="active" whichSilde="first" 
                                   image="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                  textDirection="text-left" header="Example headline."
+                                  textDirection=" text-left" header="Example headline."
                                   body="Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
                                   link="/blog" />
                     <CarouselItem isActive="" whichSilde="second" 
@@ -25,7 +25,7 @@ export function Carousel() {
                                   link="/blog" />
                     <CarouselItem isActive="" whichSilde="third" 
                                   image="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
-                                  textDirection="text-right" header="One more for good measure."
+                                  textDirection=" text-right" header="One more for good measure."
                                   body="Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
                                   link="/blog" />
                 </div>
@@ -116,10 +116,7 @@ export function Carousel() {
             </div>
             
 
-            <footer className="container">
-                <p className="float-right"><a href="/blog">Back to top</a></p>
-                <p>© 2017-2018 Company, Inc. · <a href="/blog">Privacy</a> · <a href="/blog">Terms</a></p>
-            </footer>
+            
         </main>
     );
 }

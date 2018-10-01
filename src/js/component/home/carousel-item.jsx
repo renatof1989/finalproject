@@ -6,7 +6,7 @@ export function CarouselItem(props) {
         <div className={"carousel-item " + props.isActive}>
             <img className={props.whichSilde + "-slide"} src={props.image} alt="Generic slide"></img>
             <div className="container">
-                <div className={"carousel-caption " + props.textDirection}>
+                <div className={"carousel-caption" + props.textDirection}>
                     <h1>{props.header}</h1>
                     <p>{props.body}</p>
                     <p><a className="btn btn-lg btn-primary" href={props.link} role="button">Sign up today</a></p>
