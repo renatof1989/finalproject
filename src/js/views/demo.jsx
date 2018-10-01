@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
+import DemoCarousel from '../component/demoCarousel.jsx';
+
 import '../../styles/demo.css';
 
 export class Demo extends React.Component{
@@ -9,6 +11,7 @@ export class Demo extends React.Component{
     render(){
         return (
             <React.Fragment>
+                <DemoCarousel />
                 <div className="alert alert-primary" role="alert">
                   A simple primary alert—check it out!
                 </div>
