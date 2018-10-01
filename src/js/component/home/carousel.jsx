@@ -5,7 +5,7 @@ export function Carousel() {
     
     return (
         
-        <div id="myCarousel" className="carousel slide" data-ride="carousel" style={{marginTop: "1000px"}}>
+        <div id="myCarousel top" className="carousel slide" data-ride="carousel" style={{marginTop: "1000px"}}>
             <ol className="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1" className=""></li>
