@@ -6,7 +6,7 @@ export function Carousel() {
     return (
         
         <main role="main">
-            <div id="myCarousel" className="carousel slide" data-ride="carousel">
+            <div id="myCarousel" className="carousel slide" data-ride="carousel" id ="#top">
                 <ol className="carousel-indicators">
                     <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
                     <li data-target="#myCarousel" data-slide-to="1" className=""></li>
