@@ -6,16 +6,19 @@ import Footer from "./footer.jsx";
 
 import {Carousel} from "../component/home/carousel.jsx";
 //import {Card} from "../component/home/card.jsx";
+import {Random} from "../component/home/random.jsx";
 
 export class Home extends React.Component{
     render(){
         return(
             <div>
                 <NavBar />
-                {/*Please add 'id="#top"' at the top of your pages. */}
                 
-                <Carousel />
-                <Footer />
+                <main role="main">
+                    <Carousel />
+                    <Random />
+                    <Footer />
+                </main>
             </div>
         );
     }
