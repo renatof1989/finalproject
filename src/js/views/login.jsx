@@ -4,23 +4,47 @@ import '../../styles/login.css';
 export class Login extends Component{
     render(){
         return(
-            
-            <div >
-                <form className="form-signin">
-                    {/* <img className="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72" /> */}
-                    <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-                    <label htmlFor="inputEmail" className="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" className="form-control autofocus" placeholder="Email address" required />
-                    <label htmlFor="inputPassword" className="sr-only">Password</label>
-                    <input type="password" id="inputPassword" className="form-control" placeholder="Password" required />
-                    <div className="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me" /> Remember me
-                        </label>
-                    </div>
-                    <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                    <p className="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-                </form>
+            <div className="main">
+                <div className="container">
+                    
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                            <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+                        </div>
+                        <div class="form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1" />
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                                        
+                    
+                    
+                    
+                    {/* <form className="form-signin">
+                        <h2 className="form-signin-heading">Please sign in</h2>
+                        <label htmlFor="inputEmail" className="sr-only">Email address</label>
+                        <input type="email" id="inputEmail" className="form-control" placeholder="Email address" required autofocus />
+                        <label htmlFor="inputPassword" className="sr-only">Password</label>
+                        <input type="password" id="inputPassword" className="form-control" placeholder="Password" required />
+                        <div className="checkbox">
+                            <label>
+                                <input type="checkbox" value="remember-me" /> Remember me
+                            </label>
+                        </div>
+                        <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </form> */}
+
+
+
+                </div>
             </div>
         );
     }
