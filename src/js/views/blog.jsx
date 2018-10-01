@@ -15,26 +15,25 @@ export class Blog extends React.Component{
             </div>
           </div>
           <div className="row">
-            <div className="col-6">
-            <Featurepost />
+            <div className="col-5">
+              <Featurepost />
             </div>
-                <div className="col-6">
-                <Featurepost />
-                </div>
-        </div>    
+            <div className="col-5">
+              <Featurepost />
+            </div>
+          </div>    
             <div className="row">
-              <div className="col-12">
-                <div className="page-header">
-                <h1>Latest Tea from FIRE ISLAND</h1>
+              <div className="col-8">
+                 <h1>Latest Tea from FIRE ISLAND</h1>
+              </div>
+                <div className="col-8">
+                  Oh gurl, what you got on
                 </div>
-                    <div className="col-8">Oh gurl, what you got on</div>
-                    <div className="col-4">Test 1</div>
-                        <div className="divider"></div>
-                         <hr className="left"/>
-                         <hr className="right" />
+                <div className="col-4">Test 1</div>
+                <div className="divider"></div>
             </div>
             </div>
-            </div>
+
 
       
      
