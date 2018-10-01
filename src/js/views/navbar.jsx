@@ -2,7 +2,7 @@ import React, {Component} from "react";
 
 export default class NavBar extends Component{
     render(){
-        return(<div>
+        return(
             <div>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <a className="navbar-brand" href="/">Carousel</a>
@@ -29,16 +29,6 @@ export default class NavBar extends Component{
                     </div>
                 </nav>
             </div>
-            <div>
-                <footer className="fixed-bottom container border-top">
-                    <div className="container">
-                        <div className="row">
-                            <div className="col-8">© 2017-2018 Company, Inc. · Privacy · Terms</div>
-                            <div className="col-4">Back to Top</div>
-                        </div>
-                    </div>
-                </footer>
-            </div>
-        </div>);
+        );
     }
 }
