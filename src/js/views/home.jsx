@@ -12,7 +12,8 @@ export class Home extends React.Component{
         return(
             <div>
                 <NavBar />
-
+                {/*Please add 'id="#top"' at the top of your pages. */}
+                
                 <Carousel />
                 <Footer />
             </div>
