@@ -115,13 +115,12 @@ const getState = (scope) => {
                 }
             ],
         
-            session:[
-                {
+            session:{
                 username:'Rigo',
                 email: 'rigocodes@gmail.com'
                 
-                }
-            ],
+            },
+            
             cart:[
                 {
                 product:'Leica Camera',
