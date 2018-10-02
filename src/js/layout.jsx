@@ -7,6 +7,7 @@ import {Blog} from './views/blog.jsx';
 import {Post} from './views/post.jsx';
 import {Checkout} from './views/checkout.jsx';
 import {Login} from './views/login.jsx';
+import {UserInfo} from "./views/userInfo.jsx";
 
 
 //create your first component
@@ -23,6 +24,7 @@ export class Layout extends React.Component{
                         <Route path="/post" component={Post} />
                         <Route path="/checkout" component={Checkout} />
                         <Route path="/login" component={Login} />
+                        <Route path="/info" component={UserInfo} />
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>
                 </BrowserRouter>
