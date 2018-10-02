@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import DemoCarousel from '../component/demoCarousel.jsx';
 
 import DemoList from '../component/demoList.jsx';
+import DemoProducts from '../component/demoProducts.jsx';
 
 import '../../styles/demo.css';
 
@@ -57,6 +58,9 @@ export class Demo extends React.Component{
               <div className="alert alert-dark" role="alert">
                 A simple dark alert—check it out!
               </div>
+              
+              <DemoProducts />
+              
               <Link to="/">
                   <button type="button" className="btn btn-primary">Home</button>
               </Link>

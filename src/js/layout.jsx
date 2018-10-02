@@ -7,7 +7,7 @@ import {Blog} from './views/blog.jsx';
 import {Post} from './views/post.jsx';
 import {Checkout} from './views/checkout.jsx';
 import {Login} from './views/login.jsx';
-import {UserInfo} from "./views/userInfo.jsx";
+//import {UserInfo} from "./views/userInfo.jsx";
 import {Demo} from './views/demo.jsx';
 
 import {Context} from './store/appContext.jsx';
@@ -19,8 +19,8 @@ export class Layout extends React.Component{
         return (
             <React.Fragment>
                 <BrowserRouter>
-                    <Switch>
-                        <Context.Provider>
+                    <Context.Provider>
+                        <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/product" component={Product} />
                             <Route path="/blog" component={Blog} />
@@ -29,8 +29,8 @@ export class Layout extends React.Component{
                             <Route path="/login" component={Login} />
                             <Route path="/demo" component={Demo} />
                             <Route render={() => <h1>Not found!</h1>} />
-                        </Context.Provider>
-                    </Switch>
+                        </Switch>
+                    </Context.Provider>
                 </BrowserRouter>
             </React.Fragment>
         );
