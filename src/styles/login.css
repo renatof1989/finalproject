@@ -1,18 +1,20 @@
 
-.main {
-  height: 100%;
+.mainer {
+  height: 100vh;
   width: 100%;
   background-image: url("../img/Ordinal.png");
-  opacity: 50%;
 }
 
 .main2 {
-  height: 100%;
-  width: 100%;
+  /* min-height:100%; */
+  /* width: 100%; */
+  /* -webkit-box-align: center; */
+  /* align-items: center; */
+  /* -webkit-box-pack: center; */
 }
 
-.container {
-  opacity: 50%;
+.bg-light {
+  opacity: 0.7;
 }
 
 .form-signin {

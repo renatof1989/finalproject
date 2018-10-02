@@ -2,6 +2,7 @@ import React from 'react';
 
 import Jumbotron from '../component/jumbotronblog.jsx';
 import Featurepost from '../component/featuredpost.jsx';
+import BlogPost from "../component/blogpost.jsx"
 
 export class Blog extends React.Component{
   render(){
@@ -27,7 +28,7 @@ export class Blog extends React.Component{
                  <h1>Latest Tea from FIRE ISLAND</h1>
               </div>
                 <div className="col-8">
-                  Oh gurl, what you got on
+                  <BlogPost />
                 </div>
                 <div className="col-4">Test 1</div>
                 <div className="divider"></div>
