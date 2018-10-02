@@ -13,7 +13,7 @@ const Store = (PassedComponent) =>{
         render(){
             return(
                 <Context.Provider value={this.state}>
-                    <PassedComponent props={this.props} />
+                    <PassedComponent {...this.props} />
                 </Context.Provider>
                 );
         }
