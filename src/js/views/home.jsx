@@ -14,7 +14,7 @@ export class Home extends React.Component{
             <div>
                 <NavBar />
                 
-                <main role="main" style={{marginTop: "56px"}}>
+                <main role="main" style={{backgroundColor: "white", marginTop: "56px"}}>
                     
                     <Random />
                     <Footer />
