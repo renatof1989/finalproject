@@ -128,6 +128,18 @@ const getState = (scope) => {
                 description:'Take better photos than an iPhone with this modern camera',
                 price: 150.99
                 
+                },
+                {
+                product:'Modern Motorcyle',
+                description:'This is a speed demon. New oil just added.',
+                price: 3500.50
+                
+                },
+                {
+                product:'Polaroid Camera',
+                description:'Get instant photos',
+                price: 129.99
+                
                 }
             ]
         }
