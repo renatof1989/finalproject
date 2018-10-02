@@ -15,7 +15,7 @@ export class Home extends React.Component{
                 <NavBar />
                 
                 <main role="main" style={{backgroundColor: "white", marginTop: "56px"}}>
-                    
+                    <h1 className="text-center pt-4">Carousel in progress</h1>
                     <Random />
                     <Footer />
                 </main>
