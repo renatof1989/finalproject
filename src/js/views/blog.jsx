@@ -2,41 +2,40 @@ import React from 'react';
 
 import Jumbotron from '../component/jumbotronblog.jsx';
 import Featurepost from '../component/featuredpost.jsx';
+import BlogPost from "../component/blogpost.jsx"
 
 export class Blog extends React.Component{
   render(){
     return(
-    <div>
-        <div className="container">
-          <div className="jumbotron">
-          <Jumbotron />
-          </div>
-        </div>
-    <div className="container">
-        <div className="row">
+        <div className="container-fluid">
+          <div className="row-justify-content-center">
             <div className="col-12">
-        <div className="row">
-            <div className="col-6">
-            <Featurepost />
+              <div className="jumbotron">
+                <Jumbotron />
+              </div>
             </div>
-                <div className="col-6">
-                <Featurepost />
-                </div>
-        </div>    
+          </div>
+          <div className="row">
+            <div className="col-5">
+              <Featurepost />
             </div>
-        </div>
+            <div className="col-5">
+              <Featurepost />
+            </div>
+          </div>    
             <div className="row">
-                <div className="page-header">
-                <h1>Latest Tea from FIRE ISLAND</h1>
+              <div className="col-8">
+                 <h1>Latest Tea from FIRE ISLAND</h1>
+              </div>
+                <div className="col-8">
+                  <BlogPost />
                 </div>
-                    <div className="col-8">Oh gurl, what you got on</div>
-                    <div className="col-4">col-4</div>
-                        <div classnName="divider"></div>
-                         <hr className="left"/>
-                         <hr className="right" />
+                <div className="col-4">Test 1</div>
+                <div className="divider"></div>
             </div>
             </div>
-    </div>
+
+
       
      
       );

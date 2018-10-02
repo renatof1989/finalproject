@@ -3,7 +3,7 @@
  export default class Footer extends Component{
     render(){
         return( <div>
-            <footer className="fixed-bottom container border-top p-5">
+            <footer className="container border-top p-5">
                 <div className="container ">
                     <div className="row">
                         <div className="col-8">© 2017-2018 Company, Inc. · <a href="#ppage">Privacy</a> · <a href="#termspage">Terms</a></div>
