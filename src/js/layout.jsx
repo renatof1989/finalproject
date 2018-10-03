@@ -11,14 +11,17 @@ import {Demo} from './views/demo.jsx';
 import {UserInfo} from './views/userInfo.jsx';
 import {Context} from './store/appContext.jsx';
 
+import Navbar from './views/navbar.jsx';
+
 //create your first component
 export class Layout extends React.Component{
     
     render(){
         return (
             <React.Fragment>
-                <BrowserRouter>
-                    <Context.Provider>
+                <Context.Provider>
+                    <Navbar />
+                    <BrowserRouter>
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/product" component={Product} />
@@ -30,8 +33,8 @@ export class Layout extends React.Component{
                             <Route path="/demo" component={Demo} />
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>
-                    </Context.Provider>
-                </BrowserRouter>
+                    </BrowserRouter>
+                </Context.Provider>
             </React.Fragment>
         );
     }
