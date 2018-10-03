@@ -5,9 +5,12 @@ import Store, {Context} from '../store/appContext.jsx';
 
 
 export class LogingIn extends Component{
-    
+
+ 
     render(){
+
         return(
+
             <Context.Consumer>
                 <div className="mainer p-5">
                     <div className="row justify-content-center mt-5">
@@ -36,4 +39,8 @@ export class LogingIn extends Component{
             </Context.Consumer>
         );
     }
+}
+
+export function handleSubmit(event){
+    
 }
