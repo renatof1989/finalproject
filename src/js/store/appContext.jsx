@@ -5,15 +5,15 @@ export const Context = React.createContext(null);
 
 const Store = (PassedComponent) =>{
     class StoreWrapper extends React.Component{
-        constructor(){
-            super();
+        constructor(props){
+            super(props);
             this.state = getState(this);
         }
         
         render(){
             return(
                 <Context.Provider value={this.state}>
-                    <PassedComponent />
+                    <PassedComponent {...this.props} />
                 </Context.Provider>
                 );
         }

@@ -115,21 +115,39 @@ const getState = (scope) => {
                 }
             ],
         
-            session:[
-                {
+            session:{
                 username:'Rigo',
                 email: 'rigocodes@gmail.com'
                 
-                }
-            ],
+            },
+            
             cart:[
                 {
-                product:'Leica Camera',
-                description:'Take better photos than an iPhone with this modern camera',
-                price: 150.99
-                
+                    name: 'Polaroid Camera',
+                    image: 'https://images.pexels.com/photos/191160/pexels-photo-191160.jpeg?auto=compress&cs=tinysrgb&h=500&w=500',
+                    price: 129.99,
+                    description: 'Get instant photos'
+                },
+                {
+                    name: 'Smart TV',
+                    image: 'https://images.pexels.com/photos/333984/pexels-photo-333984.jpeg?auto=compress&cs=tinysrgb&h=500&w=500',
+                    price: 250.99,
+                    description: 'Fully functional without Netflix'
+                },
+                {
+                    name: 'Crosley Record Player',
+                    image: 'https://images.pexels.com/photos/6760/light-vintage-plant-morning.jpg?auto=compress&cs=tinysrgb&h=500&w=500',
+                    price: 99.99,
+                    description: 'This will be a hit at your next party'
                 }
             ]
+        },
+        actions: {
+            addProductToCart: (product) => {
+                let store = scope.state.store;
+                store.cart.push(product);
+                scope.setState({store});
+            }
         }
     };
 };

@@ -1,11 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react';
 import {
-    //Button,
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption
+  Carousel,
+  CarouselItem,
+  CarouselControl,
+  CarouselIndicators,
+  CarouselCaption
 } from 'reactstrap';
 
 const items = [
@@ -26,7 +25,7 @@ const items = [
   }
 ];
 
-export class OurCarousel extends React.Component {
+class DemoCarousel extends Component {
   constructor(props) {
     super(props);
     this.state = { activeIndex: 0 };
@@ -66,32 +65,32 @@ export class OurCarousel extends React.Component {
     const { activeIndex } = this.state;
 
     const slides = items.map((item) => {
-      return (
-        <CarouselItem
-          onExiting={this.onExiting}
-          onExited={this.onExited}
-          key={item.src}
-        >
-          <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
-        </CarouselItem>
+        return (
+            <CarouselItem
+              onExiting={this.onExiting}
+              onExited={this.onExited}
+              key={item.src}
+            >
+                <img src={item.src} alt={item.altText} />
+                <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+            </CarouselItem>
       );
     });
 
     return (
-      <Carousel
+        <Carousel
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
-      >
-        <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
-        {slides}
-        <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
-        <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
-      </Carousel>
+        >
+            <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
+            {slides}
+            <CarouselControl direction="prev" directionText="Previous" onClickHandler={this.previous} />
+            <CarouselControl direction="next" directionText="Next" onClickHandler={this.next} />
+        </Carousel>
     );
   }
 }
 
 
-export default OurCarousel;
+export default DemoCarousel;

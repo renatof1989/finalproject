@@ -1,26 +1,40 @@
 import React, {Component} from "react";
 import '../../styles/login.css';
+// import Store, {Context} from '../store/appContext.jsx';
+
 
 export class Login extends Component{
+    
     render(){
+            //  const loger = {
+            //      user : "",
+            //      pswd : ""
+            //  };
+
         return(
-            
-            <div >
-                <form className="form-signin">
-                    {/* <img className="mb-4" src="../../assets/brand/bootstrap-solid.svg" alt="" width="72" height="72" /> */}
-                    <h1 className="h3 mb-3 font-weight-normal">Please sign in</h1>
-                    <label htmlFor="inputEmail" className="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" className="form-control autofocus" placeholder="Email address" required />
-                    <label htmlFor="inputPassword" className="sr-only">Password</label>
-                    <input type="password" id="inputPassword" className="form-control" placeholder="Password" required />
-                    <div className="checkbox mb-3">
-                        <label>
-                            <input type="checkbox" value="remember-me" /> Remember me
-                        </label>
+            <div className="mainer p-5">
+                <div className="row justify-content-center mt-5">
+
+                    <div className="bg-light p-5 col-6 rounded">
+                        <div className="container ">
+                            
+                            <form>
+                                <div className="form-group">
+                                    <label htmlFor="exampleInputEmail1">User Name</label>
+                                    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" />
+                                </div>
+
+                                <div className="form-group">
+                                    <label htmlFor="exampleInputPassword1">Password</label>
+                                    <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password" />
+                                </div>
+
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                            </form>
+        
+                        </div>
                     </div>
-                    <button className="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-                    <p className="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
-                </form>
+                </div>
             </div>
         );
     }
