@@ -8,7 +8,7 @@ import {Post} from './views/post.jsx';
 import {Checkout} from './views/checkout.jsx';
 import {Login} from './views/login.jsx';
 import {Demo} from './views/demo.jsx';
-
+import {UserInfo} from './views/userInfo.jsx';
 import {Context} from './store/appContext.jsx';
 
 //create your first component
