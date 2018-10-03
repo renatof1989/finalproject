@@ -2,7 +2,8 @@ import React from 'react';
 
 import Jumbotron from '../component/jumbotronblog.jsx';
 import Featurepost from '../component/featuredpost.jsx';
-import BlogPost from "../component/blogpost.jsx"
+import BlogPost from "../component/blogpost.jsx";
+import BlogSideBar from "../component/blogsidebar.jsx";
 
 export class Blog extends React.Component{
   render(){
@@ -16,10 +17,11 @@ export class Blog extends React.Component{
             </div>
           </div>
           <div className="row">
-            <div className="col-5">
+
+            <div className="col-6">
               <Featurepost />
             </div>
-            <div className="col-5">
+            <div className="col-6">
               <Featurepost />
             </div>
           </div>    
@@ -30,7 +32,9 @@ export class Blog extends React.Component{
                 <div className="col-8">
                   <BlogPost />
                 </div>
-                <div className="col-4">Test 1</div>
+                <div className="col-4">
+                  <BlogSideBar />
+                </div>
                 <div className="divider"></div>
             </div>
             </div>
