@@ -19,18 +19,19 @@ export class Layout extends React.Component{
         return (
             <React.Fragment>
                 <BrowserRouter>
-                    <Switch>
-                        <Context.Provider>
+                    <Context.Provider>
+                        <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/product" component={Product} />
                             <Route path="/blog" component={Blog} />
                             <Route path="/post" component={Post} />
                             <Route path="/checkout" component={Checkout} />
                             <Route path="/login" component={Login} />
+                            <Route path="/info" component={UserInfo} />
                             <Route path="/demo" component={Demo} />
                             <Route render={() => <h1>Not found!</h1>} />
-                        </Context.Provider>
-                    </Switch>
+                        </Switch>
+                    </Context.Provider>
                 </BrowserRouter>
             </React.Fragment>
         );
