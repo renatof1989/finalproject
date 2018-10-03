@@ -2,28 +2,39 @@ import React from 'react';
 
 import PropTypes from 'prop-types';
 
+import Store,{Context} from '../store/appContext.jsx';
+
   Products.propTypes = {
-    backgroundColor: PropTypes.string,
-    productColor: PropTypes.string,
-    price: PropTypes.number,
-    fontColor: PropTypes.string,
-    productDescription: PropTypes.string
+    items:PropTypes.array
 };
     
 
 function Products (props) {
     
    return (
-        <div className={`cards bg-${props.backgroundColor} text-${props.fontColor} col-xs-12 col-lg-6 text-center`}>
-           <h2 className={`pt-5 text-${props.fontColor}`}>{`Product ${props.productColor}`}</h2>
-           <p className={`pb-4 text-${props.fontColor}`}>{props.productDescription}</p>
-           <h3 className="mb-1">{`$${props.price}`}</h3> 
-           <div id="product1" className={`card bg-${props.productColor}  col-9`}>
-               <button id="purchase" type="button" className={`btn btn-${props.fontColor} text-${props.backgroundColor} pb-2 btn-lg border-${props.backgroundColor}`}>Add to cart</button>
+       <Context.Consumer>
+        {
+            ({store}) => {
+                return (
+                store.products.map((item, index)) => {
+                    return ();
+                }
+                )
+            }
+        }
+       
+       
+            <div className="cards bg-light text-dark col-xs-12 col-lg-6 text-center">
+               <h2 className="pt-5 text-dark">{`${props.items.name}`}</h2>
+               <p className=`pb-4 text-dark`>{props.items.description}</p>
+               <h3 className="mb-1">{`$${props.items.price}`}</h3> 
+               <div id="product1" className=`card bg-light col-9`}>
+                   <button id="purchase" type="button" className=`btn btn-primary text-light pb-2 btn-lg border-dark`>Add to cart</button>
+               </div>
            </div>
-       </div>
+       </Context.Consumer>
 
    );
 }
 
-export default Products;
+export default Store(Products);
