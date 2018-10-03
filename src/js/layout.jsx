@@ -26,6 +26,7 @@ export class Layout extends React.Component{
                             <Route path="/post" component={Post} />
                             <Route path="/checkout" component={Checkout} />
                             <Route path="/login" component={Login} />
+                            <Route path="/info" component={UserInfo} />
                             <Route path="/demo" component={Demo} />
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>
