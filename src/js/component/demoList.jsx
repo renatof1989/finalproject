@@ -7,8 +7,7 @@ function DemoList(props){
         <ul>
             <Context.Consumer>
                 {
-                     ({store}) => {
-                        console.log(store);
+                    ({store}) => {
                         return(
                             store.products.map((item, index) => {
                               return (<li key={index}>{item.name}</li>);
@@ -17,11 +16,6 @@ function DemoList(props){
                      }
                 }
             </Context.Consumer>
-            {
-                props.items.map((item, index) => {
-                  return (<li key={index}>{item}</li>);
-                })
-            }
         </ul>
     );
 }
