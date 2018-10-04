@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Store,{Context} from '../store/appContext.jsx';
 
-function TitleList(props){
+import '../../styles/blog.css';
+
+function BlogPost(props){
     return(
 
             <Context.Consumer>
@@ -17,13 +19,11 @@ function TitleList(props){
                      }
                 }
             </Context.Consumer>
-
-
     );
 }
 
-TitleList.propTypes = {
+BlogPost.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(TitleList);
+export default Store(BlogPost);

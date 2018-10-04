@@ -24,7 +24,7 @@ class Demo extends React.Component{
       return (
           <React.Fragment>
               <DemoCarousel />
-            
+              
               {
               
                 this.state.colors.map((item, index) => {
@@ -108,3 +108,4 @@ class Demo extends React.Component{
 }
 
 export default Store(Demo);
+

@@ -3,7 +3,14 @@ import QuantityOfItems from "../component/quantityofitems.jsx";
 import PromoCode from "../component/promocode.jsx";
 import Total from "../component/total.jsx";
 import Coupon from "../component/coupon.jsx";
+<<<<<<< HEAD
+=======
 import Form from "../component/form.jsx";
+<<<<<<< HEAD
+=======
+>>>>>>> 7c7bdefbee59e901d55bf905a388d298b95a4776
+>>>>>>> 176893d37026e5b4824fff7e0530194f926a32cf
+>>>>>>> 8daea640877c7c99aeae6d093ce775eba32121b8
 
 import List from "../component/list.jsx";
 
@@ -13,7 +20,11 @@ export class Checkout extends React.Component{
             <div  className = "container">
                 <div className = "row">
                     <div className="col-12">
+<<<<<<< HEAD
                     <Form />
+=======
+                        <Form />
+>>>>>>> 104065685e193bb4c8bcf6203352ccde02c1289c
                         <div style = {{width: "300px", margin: "100px"}}>
                             <QuantityOfItems />
                             <h3 style = {{opacity: "0.7"}}>Your cart</h3> 
@@ -28,7 +39,7 @@ export class Checkout extends React.Component{
                     </div>
                 </div>
             </div>
-            );}}
+                );}}
             
 
 export default Checkout;
