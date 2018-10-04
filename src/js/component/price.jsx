@@ -4,7 +4,7 @@ function Price(){
     return(
         <div style = {{float: "right", opacity: "0.7"}}>
                 $20.00
-                </div>
+        </div>
         );
 }
 export default Price;
