@@ -21,7 +21,7 @@ function Products () {
                             <p className="pb-3 text-dark">{item.description}</p>
                             <h3>{'$'+item.price}</h3> 
                         <div id="product1" className="card bg-light col-9">
-                            <img src={item.image} alt="product"/>
+                            <img className="mt-4 mb-4" src={item.image} alt="product"/>
                             <button id="purchase" type="button" className="btn btn-primary text-light pb-2 btn-lg border-dark">Add to cart</button>
                         </div>
                     </div>
@@ -34,7 +34,7 @@ function Products () {
                         <p className="pb-3 text-dark">{item.description}</p>
                         <h3>{'$'+item.price}</h3> 
                         <div id="product1" className="card bg-light col-9">
-                            <img src={item.image} alt="product"/>
+                            <img className="mt-4 mb-4" src={item.image} alt="product"/>
                            <button id="purchase" type="button" className="btn btn-primary text-light pb-2 btn-lg border-dark">Add to cart</button>
                         </div>
                     </div>
