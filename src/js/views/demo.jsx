@@ -7,7 +7,7 @@ import DemoCarousel from '../component/demoCarousel.jsx';
 import DemoList from '../component/demoList.jsx';
 import DemoProducts from '../component/demoProducts.jsx';
 
-import Store, {Context} from '../store/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 
 import '../../styles/demo.css';
 
@@ -36,7 +36,7 @@ class Demo extends React.Component{
               <div className="alert alert-primary" role="alert">
                 A simple primary alert—check it out!
               </div>
-              
+              <h1> Demo List</h1>
               <DemoList items={this.state.colors} />
               
               <div className="alert alert-secondary" role="alert">
@@ -107,5 +107,5 @@ class Demo extends React.Component{
   }
 }
 
-export default Store(Demo);
+export default Demo;
 

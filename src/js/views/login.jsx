@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import '../../styles/login.css';
 // import {LogingIn} from "../component/loginIn";
-import Store, {Context} from '../store/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 import PropTypes from 'prop-types';
 
 export class Login extends Component{
@@ -30,51 +30,53 @@ export class Login extends Component{
     render(){
         const user = this.state;
         return(
+            <React.Fragment>
 
-            <Context.Consumer>
-                {
-                    ({store, actions}) => {
-                        return (
-                            <div className="mainer p-5">
-                                <div className="row justify-content-center mt-5">
+                <Context.Consumer>
+                    {
+                        ({store, actions}) => {
+                            return (
+                                <div className="mainer p-5">
+                                    <div className="row justify-content-center mt-5">
 
-                                    <div className="bg-light p-5 col-6 rounded">
-                                        <div className="container ">
-                                            
-                                            <form >
-                                                <div className="form-group">
-                                                    <label>User Name</label>
-                                                    <input type="userName" ref={(ref) => this.nameTextInput = ref} className="form-control" placeholder="username" />
-                                                </div>
+                                        <div className="bg-light p-5 col-6 rounded">
+                                            <div className="container ">
+                                                
+                                                <form >
+                                                    <div className="form-group">
+                                                        <label>User Name</label>
+                                                        <input type="userName" ref={(ref) => this.nameTextInput = ref} className="form-control" placeholder="username" />
+                                                    </div>
 
-                                                <div className="form-group">
-                                                    <label>Email Address</label>
-                                                    <input type="email" ref={(ref) => this.emailTextInput = ref} className="form-control" placeholder="email " />
-                                                </div>
+                                                    <div className="form-group">
+                                                        <label>Email Address</label>
+                                                        <input type="email" ref={(ref) => this.emailTextInput = ref} className="form-control" placeholder="email " />
+                                                    </div>
 
-                                                <button type="submit" onClick = {(event) => { 
-                                                    if (this.handleRequest(event)){
-                                                        if (actions.isLegalUser(user)){
-                                                            this.props.history.push('/');
+                                                    <button type="submit" onClick = {(event) => { 
+                                                        if (this.handleRequest(event)){
+                                                            if (actions.isLegalUser(user)){
+                                                                this.props.history.push('/');
+                                                            }
                                                         }
-                                                    }
-                                                }} className="btn btn-primary" >Submit</button>
-                                    
-                                            </form>
-                        
+                                                    }} className="btn btn-primary" >Submit</button>
+                                        
+                                                </form>
+                            
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        );
+                            );
+                        }
                     }
-                }
-            </Context.Consumer>
+                </Context.Consumer>
+            </React.Fragment>
         );
     }
 }
 
-export default Store(Login);
+export default Login;
 
 Login.propTypes = {
     history: PropTypes.object

@@ -10,7 +10,7 @@ import {Checkout} from './views/checkout.jsx';
 import Login from './views/login.jsx';
 import Demo from './views/demo.jsx';
 import {UserInfo} from './views/userInfo.jsx';
-import {Context} from './store/appContext.jsx';
+import Store from './store/appContext.jsx';
 
 import Navbar from './views/navbar.jsx';
 import Footer from "./views/footer.jsx";
@@ -22,23 +22,25 @@ export class Layout extends React.Component{
         return (
             <BrowserRouter>
                 <ScrollToTop>
-                    <Context.Provider>
-                        <Navbar />
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/product" component={Product} />
-                            <Route path="/blog" component={Blog} />
-                            <Route path="/post" component={Post} />
-                            <Route path="/checkout" component={Checkout} />
-                            <Route path="/login" component={Login} />
-                            <Route path="/info" component={UserInfo} />
-                            <Route path="/demo" component={Demo} />
-                            <Route render={() => <h1>Not found!</h1>} />
-                        </Switch>
-                        <Footer />
-                    </Context.Provider>
+                    
+                    <Navbar />
+                    <Switch>
+                        <Route exact path="/" component={Home} />
+                        <Route path="/product" component={Product} />
+                        <Route path="/blog" component={Blog} />
+                        <Route path="/post" component={Post} />
+                        <Route path="/checkout" component={Checkout} />
+                        <Route path="/login" component={Login} />
+                        <Route path="/info" component={UserInfo} />
+                        <Route path="/demo" component={Demo} />
+                        <Route render={() => <h1>Not found!</h1>} />
+                    </Switch>
+                    <Footer />
+                    
                 </ScrollToTop>
             </BrowserRouter>
         );
     }
 }
+
+export default Store(Layout);

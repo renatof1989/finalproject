@@ -149,10 +149,14 @@ const getState = (scope) => {
                 scope.setState({store});
             },
             isLegalUser: (user) => {
+                console.log(scope.state.store.session);
+
                 let store = scope.state.store;
                 if (user.username === store.session.username && user.email === store.session.email){
                     store.session.loggedIn = true;
                     scope.setState({store});
+                    console.log(scope.state.store.session);
+                    
                     return true;
                 } 
             }
