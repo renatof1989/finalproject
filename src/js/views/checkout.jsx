@@ -5,6 +5,7 @@ import PromoCode from "../component/promocode.jsx";
 import Total from "../component/total.jsx";
 import Coupon from "../component/coupon.jsx";
 import Price from "../component/price.jsx";
+import Form from "../component/form.jsx";
 
 
 export class Checkout extends React.Component{
@@ -12,6 +13,7 @@ export class Checkout extends React.Component{
         return(
             <div  className = "container">
                 <div className = "row">
+                    <Form />
                     <div style = {{width: "300px", margin: "100px"}}>
                         <QuantityOfItems />
                         <h3 style = {{opacity: "0.7"}}>Your cart</h3> 
