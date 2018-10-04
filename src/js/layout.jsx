@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from './component/functional/scrollToTop.jsx';
 
-import {Home} from './views/home.jsx';
+import Home from './views/home.jsx';
 import {Product} from './views/product.jsx';
 import {Blog} from './views/blog.jsx';
 import {Post} from './views/post.jsx';
