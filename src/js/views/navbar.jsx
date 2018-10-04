@@ -29,22 +29,15 @@ class NavBar extends Component{
                                 </Link>
                             </li>
                             <li className="nav-item">
-                                <Link to="/post">
-                                    <button type="button" className="btn btn-dark">Post</button>
-                                </Link>
-                            </li>    
-                            <li className="nav-item">
                                 <Link to="/checkout">
                                     <button type="button" className="btn btn-dark">Checkout</button>
                                 </Link>                            
                             </li>
                             <li className="nav-item">
                                 <Link to="/login">
-                                    <button type="button" className="btn btn-primary">Login</button>
+                                    <button type="button" className="btn btn-success">Login</button>
                                 </Link>                            
                             </li>
-                            
-                            
                             <Context.Consumer>
                                 {
                                ({store}) => {
