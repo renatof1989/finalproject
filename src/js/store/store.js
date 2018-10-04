@@ -117,8 +117,8 @@ const getState = (scope) => {
         
             session:{
                 username:'Rigo',
-                email: 'rigocodes@gmail.com'
-                
+                email: 'rigocodes@gmail.com',
+                loggedIn: false
             },
             
             cart:[
@@ -147,6 +147,15 @@ const getState = (scope) => {
                 let store = scope.state.store;
                 store.cart.push(product);
                 scope.setState({store});
+            },
+            isLegalUser: (user) => {
+                let store = scope.state.store;
+                if (user.username === store.session.username && user.email === store.session.email){
+                    store.session.loggedIn = true;
+                    scope.setState({store});
+                    console.log("You are logged In");
+                    return true;
+                } 
             }
         }
     };
