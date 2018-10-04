@@ -38,7 +38,6 @@ class NavBar extends Component{
                                     <button type="button" className="btn btn-success">Login</button>
                                 </Link>                            
                             </li>
-                            
                         </ul>
 
                         <form className="form-inline my-2 my-lg-0">
