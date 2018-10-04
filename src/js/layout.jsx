@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import ScrollToTop from './component/functional/scrollToTop.jsx';
 
 import {Home} from './views/home.jsx';
 import {Product} from './views/product.jsx';
@@ -12,16 +13,17 @@ import {UserInfo} from './views/userInfo.jsx';
 import {Context} from './store/appContext.jsx';
 
 import Navbar from './views/navbar.jsx';
+import Footer from "./views/footer.jsx";
 
 //create your first component
 export class Layout extends React.Component{
     
     render(){
         return (
-            <React.Fragment>
-                <Context.Provider>
-                    <Navbar />
-                    <BrowserRouter>
+            <BrowserRouter>
+                <ScrollToTop>
+                    <Context.Provider>
+                        <Navbar />
                         <Switch>
                             <Route exact path="/" component={Home} />
                             <Route path="/product" component={Product} />
@@ -33,9 +35,10 @@ export class Layout extends React.Component{
                             <Route path="/demo" component={Demo} />
                             <Route render={() => <h1>Not found!</h1>} />
                         </Switch>
-                    </BrowserRouter>
-                </Context.Provider>
-            </React.Fragment>
+                        <Footer />
+                    </Context.Provider>
+                </ScrollToTop>
+            </BrowserRouter>
         );
     }
 }
