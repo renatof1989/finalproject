@@ -45,6 +45,11 @@ class NavBar extends Component{
                                }
                            }
                             </Context.Consumer>
+                            <li className="nav-item">
+                                <Link to="/demo">
+                                    <button type="button" className="btn btn-success">demo</button>
+                                </Link>                            
+                            </li>
                         </ul>
 
                         <form className="form-inline my-2 my-lg-0">
