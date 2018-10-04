@@ -105,11 +105,7 @@ class Demo extends React.Component{
           </React.Fragment>
           );
   }
-<<<<<<< HEAD
-    
-}
-=======
 }
 
 export default Store(Demo);
->>>>>>> 7c7bdefbee59e901d55bf905a388d298b95a4776
+
