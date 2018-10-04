@@ -1,14 +1,25 @@
+<<<<<<< HEAD
+import React from 'react';
+import Form from "../component/form.jsx";
+
+=======
 import React from "react";
 import QuantityOfItems from "../component/quantityofitems.jsx";
 import PromoCode from "../component/promocode.jsx";
 import Total from "../component/total.jsx";
 import Coupon from "../component/coupon.jsx";
 import Form from "../component/form.jsx";
+>>>>>>> 7c7bdefbee59e901d55bf905a388d298b95a4776
 
 import List from "../component/list.jsx";
 
 export class Checkout extends React.Component{
     render(){
+<<<<<<< HEAD
+        return(<Form />);
+    }
+}
+=======
         return(
             <div  className = "container">
                 <div className = "row">
@@ -36,3 +47,4 @@ export default Checkout;
 
 
 
+>>>>>>> 7c7bdefbee59e901d55bf905a388d298b95a4776
