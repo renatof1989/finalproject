@@ -15,7 +15,11 @@ export class Checkout extends React.Component{
             <div  className = "container">
                 <div className = "row">
                     <div className="col-12">
+<<<<<<< HEAD
+                    <Form />
+=======
                         <Form />
+>>>>>>> 104065685e193bb4c8bcf6203352ccde02c1289c
                         <div style = {{width: "300px", margin: "100px"}}>
                             <QuantityOfItems />
                             <h3 style = {{opacity: "0.7"}}>Your cart</h3> 
