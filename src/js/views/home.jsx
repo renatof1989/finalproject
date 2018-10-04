@@ -18,7 +18,7 @@ export class Home extends React.Component{
                                 {
                                     ({store}) => {
                                         return (
-                                            store.posts.map((item, index) => {
+                                            store.posts.filter((item, index) => {return (index > 2)}).map((item, index) => {
                                                 return (
                                                     <React.Fragment key={index}>
                                                         <Card thumbnail={item.thumbnail}
