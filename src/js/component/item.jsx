@@ -1,5 +1,4 @@
 import React from "react";
-import Price from "../component/price.jsx";
 import PropTypes from 'prop-types';
 
 function Item(props){
