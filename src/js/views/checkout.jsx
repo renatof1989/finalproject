@@ -13,6 +13,7 @@ export class Checkout extends React.Component{
         return(
             <div  className = "container">
                 <div className = "row">
+                    <div className="col-12">
                     <Form />
                     <div style = {{width: "300px", margin: "100px"}}>
                         <QuantityOfItems />
@@ -27,6 +28,7 @@ export class Checkout extends React.Component{
                         
                         <Coupon />
                     </div>
+                </div>
                 </div>
             </div>
             );}}
