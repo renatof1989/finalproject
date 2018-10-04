@@ -153,7 +153,6 @@ const getState = (scope) => {
                 if (user.username === store.session.username && user.email === store.session.email){
                     store.session.loggedIn = true;
                     scope.setState({store});
-                    console.log("You are logged In");
                     return true;
                 } 
             }

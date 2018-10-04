@@ -7,21 +7,21 @@
     bottom: 0;
     left:0;
     right:0;
-    height: 140px;
+    height: 550px;
     margin:auto;
     
 }
 
 .cards {
     border: 5px solid white;
-    height: 390px;
     position: relative;
+    height: 800px;
 }
 
 #purchase {
     position: relative;
     bottom: 0;
-    margin-top:80px;
+   
 }
 /* 
 
