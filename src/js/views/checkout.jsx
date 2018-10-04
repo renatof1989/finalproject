@@ -4,7 +4,6 @@ import Item from "../component/item.jsx";
 import PromoCode from "../component/promocode.jsx";
 import Total from "../component/total.jsx";
 import Coupon from "../component/coupon.jsx";
-import Price from "../component/price.jsx";
 
 
 export class Checkout extends React.Component{
