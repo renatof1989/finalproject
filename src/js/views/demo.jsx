@@ -7,9 +7,11 @@ import DemoCarousel from '../component/demoCarousel.jsx';
 import DemoList from '../component/demoList.jsx';
 import DemoProducts from '../component/demoProducts.jsx';
 
+import Store, {Context} from '../store/appContext.jsx';
+
 import '../../styles/demo.css';
 
-export class Demo extends React.Component{
+class Demo extends React.Component{
   
   constructor(){
     super();
@@ -22,7 +24,7 @@ export class Demo extends React.Component{
       return (
           <React.Fragment>
               <DemoCarousel />
-            
+              
               {
               
                 this.state.colors.map((item, index) => {
@@ -80,6 +82,20 @@ export class Demo extends React.Component{
                   <button type="button" className="btn btn-info">Login</button>
               </Link>
               
+              <ul>
+                  <Context.Consumer>
+                      {
+                          ({store}) => {
+                              return(
+                                  store.products.map((item, index) => {
+                                    return (<li key={index}>{item.name}</li>);
+                                  })
+                              );
+                           }
+                      }
+                  </Context.Consumer>
+              </ul>
+              
               <br/>
               <button type="button" className="btn btn-light">Light</button>
               
@@ -89,4 +105,11 @@ export class Demo extends React.Component{
           </React.Fragment>
           );
   }
+<<<<<<< HEAD
+    
 }
+=======
+}
+
+export default Store(Demo);
+>>>>>>> 7c7bdefbee59e901d55bf905a388d298b95a4776
