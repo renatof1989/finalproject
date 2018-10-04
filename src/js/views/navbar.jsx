@@ -45,15 +45,13 @@ class NavBar extends Component{
                                 <Context.Consumer>
                                     {
                                         ({store}) => {
-                                            console.log(store.session);
-                                            //    store.session.loggedIn returns false once we leave the loggin page : to be fixed.
                                                if (store.session.loggedIn){
                                                 return (
                                                     <ul className="navbar-nav">
                                                         <li className="nav-item"><a className="nav-link" href = "">Hello {store.session.username}! </a></li>
                                                     </ul>
                                                     );
-                                                       }
+                                            }
                                         }
                                     }
                                 </Context.Consumer>
