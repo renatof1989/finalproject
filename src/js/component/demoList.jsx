@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Store,{Context} from '../store/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 
 function DemoList(props){
     return(
@@ -24,4 +24,4 @@ DemoList.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(DemoList);
+export default DemoList;

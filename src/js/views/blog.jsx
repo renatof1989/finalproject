@@ -1,9 +1,9 @@
 import React from 'react';
 
 import Jumbotron from '../component/jumbotronblog.jsx';
-import Featurepost from '../component/featuredpost.jsx';
-import BlogPost from "../component/blogpost.jsx";
-import BlogSideBar from "../component/blogsidebar.jsx";
+import Featuredpost from '../component/featuredpost.jsx';
+import BlogPost from '../component/blogpost.jsx';
+//import Featurecard from '../component/featurecard.jsx';
 
 export class Blog extends React.Component{
   render(){
@@ -12,29 +12,22 @@ export class Blog extends React.Component{
           <div className="row-justify-content-center">
             <div className="col-12">
               <div className="jumbotron">
-                <Jumbotron />
+                <Jumbotron/>
               </div>
             </div>
           </div>
           <div className="row">
-
-            <div className="col-6">
-              <Featurepost />
-            </div>
-            <div className="col-6">
-              <Featurepost />
-            </div>
+              <Featuredpost />
           </div>    
             <div className="row">
               <div className="col-8">
                  <h1>Latest Tea from FIRE ISLAND</h1>
               </div>
+              <hr class="featurette-divider my-5"></hr>
                 <div className="col-8">
                   <BlogPost />
                 </div>
-                <div className="col-4">
-                  <BlogSideBar />
-                </div>
+                <div className="col-4">Test 1</div>
                 <div className="divider"></div>
             </div>
             </div>

@@ -18,6 +18,7 @@ const Store = (PassedComponent) =>{
                 );
         }
     }
+    
     return StoreWrapper;
 };
 
