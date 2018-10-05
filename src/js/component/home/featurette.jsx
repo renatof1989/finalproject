@@ -25,7 +25,7 @@ export function Featurette(props) {
 Featurette.propTypes = {
     isReverse: PropTypes.bool,
     name: PropTypes.string,
-    price: PropTypes.string,
+    price: PropTypes.number,
     description: PropTypes.string,
     image: PropTypes.string
 }

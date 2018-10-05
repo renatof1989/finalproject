@@ -1,6 +1,6 @@
 import React from "react";
 
-//import {OurCarousel} from "../component/home/carousel.jsx";
+import {OurCarousel} from "../component/home/carousel.jsx";
 import {Card} from "../component/home/card.jsx";
 import {Featurette} from "../component/home/featurette.jsx";
 
@@ -12,6 +12,25 @@ export class Home extends React.Component{
             <div>
                 <main role="main" style={{backgroundColor: "white", marginTop: "56px"}}>
                     <h1 className="text-center pt-4">Carousel in progress</h1>
+                    <Context.Consumer>
+                        {
+                            ({store}) => {
+                                return <OurCarousel items={
+                                                store.posts.filter((item, index) => {return (index < 3)}).map((item, index) => {
+                                                    return (
+                                                        {
+                                                            src: item.image,
+                                                            altText: item.title,
+                                                            caption: item.content
+                                                        }
+                                                    );
+                                                })
+                                            }
+                                    />
+                            }
+                        }
+                    </Context.Consumer>
+                    
                     <div className="container mb-3">
                         <div className="row pt-5" style={{textAlign: "center"}}>
                             <Context.Consumer>
@@ -24,7 +43,7 @@ export class Home extends React.Component{
                                                         <Card thumbnail={item.thumbnail}
                                                               title={item.title}
                                                               content={item.content}
-                                                              href="/blog"
+                                                              link="/blog"
                                                               /><col-lg-4 />
                                                     </React.Fragment>
                                                 );
