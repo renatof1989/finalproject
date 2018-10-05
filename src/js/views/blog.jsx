@@ -23,6 +23,7 @@ export class Blog extends React.Component{
               <div className="col-8">
                  <h1>Latest Tea from FIRE ISLAND</h1>
               </div>
+              <hr class="featurette-divider my-5"></hr>
                 <div className="col-8">
                   <BlogPost />
                 </div>
