@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Context} from '<path_to_store>/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 
  
 
@@ -50,3 +50,4 @@ function Products () {
    );
 }
 
+export default Products;
