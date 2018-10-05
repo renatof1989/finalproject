@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Store,{Context} from '../store/appContext.jsx';
+import {Context} from '<path_to_store>/appContext.jsx';
 
  
 
@@ -17,24 +17,24 @@ function Products () {
                         return (
                     
                         <div className="cards bg-light text-dark col-12 mx-auto text-center">
-                            <h2 className="pt-4 text-dark">{`${item.name}`}</h2>
-                            <p className="pb-3 text-dark">{item.description}</p>
+                            <h2 className="pt-4 text-dark">{item.name}</h2>
+                            <p className="text-dark">{item.description}</p>
                             <h3>{'$'+item.price}</h3> 
-                        <div id="product1" className="card bg-light col-9">
-                            <img className="mt-4 mb-4" src={item.image} alt="product"/>
-                            <button id="purchase" type="button" className="btn btn-primary text-light pb-2 btn-lg border-dark">Add to cart</button>
+                            <div id="product1" className="card bg-light col-xs-12 col-lg-9">
+                                <img className="mt-4 mb-4" src={item.image} alt="product"/>
+                                <button id="purchase" type="button" className="btn btn-primary text-light pb-2 btn-lg border-dark">Add to cart</button>
+                            </div>
                         </div>
-                    </div>
                     )}
                     
                     
                     return (
                     <div className="cards bg-light text-dark col-xs-12 col-lg-6 text-center">
                         <h2 className="pt-5 text-dark">{item.name}</h2>
-                        <p className="pb-3 text-dark">{item.description}</p>
+                        <p className=" text-dark">{item.description}</p>
                         <h3>{'$'+item.price}</h3> 
-                        <div id="product1" className="card bg-light col-9">
-                            <img className="mt-4 mb-4" src={item.image} alt="product"/>
+                        <div id="product1" className="card bg-light col-xs-12 col-lg-9">
+                           <img className="mt-4 mb-4" src={item.image} alt="product"/>
                            <button id="purchase" type="button" className="btn btn-primary text-light pb-2 btn-lg border-dark">Add to cart</button>
                         </div>
                     </div>
