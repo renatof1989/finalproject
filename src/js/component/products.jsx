@@ -50,4 +50,3 @@ function Products () {
    );
 }
 
-export default Store(Products);

@@ -14,7 +14,7 @@ export class Checkout extends React.Component{
         return(
             <div  className = "container">
                 <div className = "row">
-                    <div className="col-12">
+                    <div className="col-9">
                         <Form />
                         <div style = {{width: "300px", margin: "100px"}}>
                             <QuantityOfItems />
