@@ -17,12 +17,12 @@ function TitleList(props){
                               <div className="col-8">
                               <div className="card">
                               <div className="card-body">
-                              <h5 className= "card-title"></h5>
+                              <h5 className= "card-title">Title</h5>
                             <p className="text-primary">{item.tags}</p>
                               <h2 key={index}>{item.title}</h2>
                                     <p> {item.date}</p>
-                                     <p className= "card-text"></p>
-                                    <p>{item.content}</p>  
+                                    <p className= "card-text"></p>
+                                    <p>{item.content.substring(0,60)}</p>  
                                     <p className= "card-link"></p>
                                     <link>{item.link}</link></div>
                                     </div>
@@ -34,7 +34,7 @@ function TitleList(props){
                                     </div>
                                </div>);
                               } else {
-                                  return ;
+                                  return null ;
                               }
                             })
                         );
