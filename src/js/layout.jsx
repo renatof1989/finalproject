@@ -5,13 +5,12 @@ import ScrollToTop from './component/functional/scrollToTop.jsx';
 import Home from './views/home.jsx';
 import {Product} from './views/product.jsx';
 import {Blog} from './views/blog.jsx';
-import {Post} from './views/post.jsx';
+import Post from './views/post.jsx';
 import {Checkout} from './views/checkout.jsx';
 import Login from './views/login.jsx';
 import Demo from './views/demo.jsx';
 import {UserInfo} from './views/userInfo.jsx';
 import Store from './store/appContext.jsx';
-
 import Navbar from './views/navbar.jsx';
 import Footer from "./views/footer.jsx";
 

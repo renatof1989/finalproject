@@ -12,7 +12,7 @@ function BlogPost(props){
                   ({store}) => {
                         return(
                             store.posts.map((item, index) => {
-                              return (<div><h2 key={index}>{item.title}</h2><p key={index}>{item.date} by {item.author}</p><li key={index}>{item.content}</li></div>);
+                              return (<div><h2 key={index}>{item.title}</h2><p key={index}>{item.date.substring(1,3)} by {item.author}</p><li key={index}>{item.content}</li></div>);
                               
                             })
                         );
