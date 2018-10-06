@@ -16,7 +16,7 @@ function Products () {
                     if(index===0) {
                         return (
                     
-                            <div className="cards bg-light text-dark col-12 mx-auto text-center">
+                            <div key={index} className="cards bg-light text-dark col-12 mx-auto text-center">
                                 <h2 className="pt-4 text-dark">{item.name}</h2>
                                 <p className="text-dark">{item.description}</p>
                                 <h3>{'$'+item.price}</h3> 

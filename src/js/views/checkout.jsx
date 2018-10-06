@@ -11,10 +11,10 @@ export class Checkout extends React.Component{
     render(){
         return(
             <div  className = "container">
-                <div className = "row">
-                    <div className="col-9">
+                <div className = "row mt-3">
+                    <div className="col-11 d-flex justify-content-center mx-auto">
                         <Form />
-                        <div style = {{width: "300px", margin: "100px"}}>
+                        <div className="col-5">
                             <QuantityOfItems />
                             <h3 style = {{opacity: "0.7"}}>Your cart</h3> 
                             <div style = {{backgroundColor: "white", borderRadius: "5px", border: "1px solid #acadaf", padding: "15px"}}>
