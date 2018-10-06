@@ -87,8 +87,12 @@ class Demo extends React.Component{
                       {
                           ({store}) => {
                               return(
-                                  store.products.map((item, index) => {
-                                    return (<li key={index}>{item.name}</li>);
+                                  store.demo.map((item, index) => {
+                                    return (
+                                        <Link key={index} to={"/single/"+index}>
+                                            <li>{item.title}</li>
+                                        </Link>
+                                    );
                                   })
                               );
                            }
