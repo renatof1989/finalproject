@@ -2,7 +2,7 @@ import React from 'react';
 
 function Form() {
     return(
-        <form className="mx-auto col-6">
+        <form className="col-6">
             <div class="form-row">
                 <div class="col-md-6 mb-3 p-1">
                     <label for="validationServer01">First name</label>
