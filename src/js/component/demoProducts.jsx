@@ -4,34 +4,38 @@ import {Context} from '../store/appContext.jsx';
 function DemoProducts(props){
     
     return(
-        <ul>
-            <Context.Consumer>
-                {({store, actions}) => {
-                return(
-                    <div className="container">
-                        <ul>
+        <Context.Consumer>
+            {({store, actions}) => {
+            return(
+                <div className="row">
+                    <div className="col-6">
+                        <h3>Click to add to cart</h3>
+                        <ul className="list-group">
                             {
                             store.products.map((item, index) => {
                                 return (
-                                    <li key={index} onClick={() => {actions.addProductToCart(item);}}>
+                                    <li key={index} className="list-group-item" onClick={() => {actions.addProductToCart(item);}}>
                                         {item.name}
                                     </li>
                                 );
                             })
                             }
                         </ul>
-                        <ul>
+                    </div>
+                    <div className="col-6">
+                        <h3>The cart</h3>
+                        <ul className="list-group">
                             {
                             store.cart.map((item, index) => {
-                                return (<li key={index}>{item.name}</li>);
+                                return (<li className="list-group-item" key={index}>{item.name}</li>);
                             })
                             }
                         </ul>
                     </div>
-                    );
-                }}
-            </Context.Consumer>
-        </ul>
+                </div>
+                );
+            }}
+        </Context.Consumer>
     );
 };
 
