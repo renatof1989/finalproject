@@ -12,14 +12,6 @@ function Post(props){
               ({store}) => {
                     return(
                         store.posts.map((item, index) => {
-<<<<<<< HEAD
-                          if (index<1) {return (
-                              <div>
-                                  <h2 key={index}>{item.title}</h2>
-                                  <p key={index}>{item.date} by {item.author}</p>
-                                  <li key={index}>{item.content}</li>
-                                  <div key={index} alt="" href={item.image}></div></div>);
-=======
                         if (index<1) {
                         return (
                             <div>
@@ -28,7 +20,6 @@ function Post(props){
                                 <li key={index}>{item.content}</li>
                                 <div key={index} alt="" href={item.image}></div>
                             </div>);
->>>>>>> 1c19241c76c4a22c05ab56e000e7042b662ce70f
                         } return null })
                     );
                  }
