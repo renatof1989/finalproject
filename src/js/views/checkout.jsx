@@ -5,8 +5,6 @@ import Total from "../component/total.jsx";
 import Coupon from "../component/coupon.jsx";
 
 import Form from "../component/form.jsx";
-
-
 import List from "../component/list.jsx";
 
 export class Checkout extends React.Component{
