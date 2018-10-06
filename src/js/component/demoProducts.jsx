@@ -1,5 +1,5 @@
 import React from 'react';
-import Store,{Context} from '../store/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 
 function DemoProducts(props){
     
@@ -35,4 +35,4 @@ function DemoProducts(props){
     );
 };
 
-export default Store(DemoProducts);
+export default DemoProducts;
