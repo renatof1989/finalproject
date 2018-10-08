@@ -82,16 +82,21 @@ class Demo extends React.Component{
                   <button type="button" className="btn btn-info">Login</button>
               </Link>
               
-              <ul>
+              <ul className="list-group" style={{width: 600, margin: "auto"}}>
                   <Context.Consumer>
                       {
-                          ({store}) => {
+                          ({store, actions}) => {
                               return(
                                   store.demo.map((item, index) => {
                                     return (
-                                        <Link key={index} to={"/single/"+index}>
-                                            <li>{item.title}</li>
-                                        </Link>
+                                        <li key={index} className="list-group-item" style={{background:item.background}}>
+                                            <Link to={"/single/"+index}>
+                                                <span>{item.title}</span>
+                                            </Link>
+                                            <button className="btn btn-success" onClick={()=>actions.changeColor(index,"orange")}>
+                                                Change Color
+                                            </button>
+                                        </li>
                                     );
                                   })
                               );
