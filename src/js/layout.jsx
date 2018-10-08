@@ -10,6 +10,7 @@ import {Checkout} from './views/checkout.jsx';
 import Login from './views/login.jsx';
 import Demo from './views/demo.jsx';
 import {UserInfo} from './views/userInfo.jsx';
+import {Single} from './views/single.jsx';
 import Store from './store/appContext.jsx';
 
 import Navbar from './views/navbar.jsx';
@@ -33,6 +34,7 @@ export class Layout extends React.Component{
                         <Route path="/login" component={Login} />
                         <Route path="/info" component={UserInfo} />
                         <Route path="/demo" component={Demo} />
+                        <Route path="/single/:theid" component={Single} />
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>
                     <Footer />
