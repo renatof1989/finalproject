@@ -52,19 +52,19 @@ export class OurCarousel extends React.Component {
   render() {
     const { activeIndex } = this.state;
 
-    const slides = this.items.map((item) => {
+    const slides = this.items.map((item, index) => {
       return (
           <CarouselItem
             onExiting={this.onExiting}
             onExited={this.onExited}
             key={item.src}
             >
-              <Link to="/blog">
+              <Link to={"/post/" + index}>
                   <div className="text-center">
-                      <img src={item.src} alt={item.altText} />
+                      <img src={item.src} alt={item.title} />
                   </div>
                   <div className="text-danger">
-                      <CarouselCaption captionText={item.caption} captionHeader={item.caption} cssModule={{color: "red"}}/>
+                      <CarouselCaption className="text-dark bg-light" captionText={item.content.slice(0, item.content.slice(0, 250).lastIndexOf(" ")) + "..."} captionHeader={item.title} />
                   </div>
               </Link>
           </CarouselItem>

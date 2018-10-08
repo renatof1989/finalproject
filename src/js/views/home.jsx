@@ -10,18 +10,17 @@ export class Home extends React.Component{
     render(){
         return(
             <div>
-                <main role="main" style={{backgroundColor: "white", marginTop: "56px"}}>
-                    <h1 className="text-center pt-4">Carousel in progress</h1>
+                <main role="main" style={{backgroundColor: "white"}}>
                     <Context.Consumer>
                         {
                             ({store}) => {
                                 return <OurCarousel items={
-                                                store.posts.filter((item, index) => {return (index < 3)}).map((item, index) => {
+                                                store.posts.slice(0,3).map((item, index) => {
                                                     return (
                                                         {
                                                             src: item.image,
-                                                            altText: item.title,
-                                                            caption: item.content
+                                                            title: item.title,
+                                                            content: item.content
                                                         }
                                                     );
                                                 })
@@ -37,13 +36,13 @@ export class Home extends React.Component{
                                 {
                                     ({store}) => {
                                         return (
-                                            store.posts.filter((item, index) => {return (index > 2)}).map((item, index) => {
+                                            store.posts.slice(3,6).map((item, index) => {
                                                 return (
                                                     <React.Fragment key={index}>
                                                         <Card thumbnail={item.thumbnail}
                                                               title={item.title}
                                                               content={item.content}
-                                                              link="/blog"
+                                                              link={"/post/" + (index + 3)}
                                                               /><col-lg-4 />
                                                     </React.Fragment>
                                                 );
@@ -67,7 +66,8 @@ export class Home extends React.Component{
                                                                 product={item}
                                                                 button={
                                                                     <React.Fragment>
-                                                                        <button className="btn btn-primary" onClick={() => actions.addProductToCart(item)}>Add to Cart</button>
+                                                                        <button className="btn btn-primary"
+                                                                                onClick={() => actions.addProductToCart(item)}>Add to Cart</button>
                                                                     </React.Fragment>
                                                                 }
                                                                 />
