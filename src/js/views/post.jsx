@@ -2,34 +2,24 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import {Context} from '../store/appContext.jsx';
 
-import '../../styles/blog.css';
-
-function Post(props){
-    return(
-
-        <Context.Consumer>
-            {
-              ({store}) => {
-                    return(
-                        store.posts.map((item, index) => {
-                        if (index<1) {
-                        return (
-                            <div>
-                                <h2 key={index}>{item.title}</h2>
-                                <p key={index}>{item.date} by {item.author}</p>
-                                <li key={index}>{item.content}</li>
-                                <div key={index} alt="" href={item.image}></div>
-                            </div>);
-                        } return null })
-                    );
-                 }
-            }
-        </Context.Consumer>
-    );
+export class Post extends React.Component{
+    
+    render(){
+       
+        return(
+            <Context.Consumer>
+                {
+                ({store}) =>{
+                    return <div><h1>: {store.posts[this.props.match.params.theid].title}</h1>
+                    <p>{store.posts[this.props.match.params.theid].date}</p>
+                    <p>{store.posts[this.props.match.params.theid].author}</p>
+                    <p1>{store.posts[this.props.match.params.theid].content}</p1></div>;
+                }    
+                }
+            </Context.Consumer>);
+    }
 }
 
 Post.propTypes = {
-    items: PropTypes.array
+    match: PropTypes.object
 };
-
-export default Post;

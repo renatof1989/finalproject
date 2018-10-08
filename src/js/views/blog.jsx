@@ -21,7 +21,7 @@ export class Blog extends React.Component{
           </div>    
             <div className="row">
               <div className="col-8">
-                 <h1>Latest Tea from FIRE ISLAND</h1>
+                 <h1>From the Firehouse</h1>
               <div className="divider"></div>
                 <div className="row">
                   <BlogPost />
