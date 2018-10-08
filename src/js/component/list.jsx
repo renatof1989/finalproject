@@ -1,6 +1,6 @@
 import React from "react";
 import Item from "../component/item.jsx";
-import Store,{Context} from '../store/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 
 
 function List(){
@@ -9,10 +9,10 @@ function List(){
         <Context.Consumer>
                 {
                      ({store}) => {
-                        console.log(store);
+                        
                         return(
                             store.cart.map((item, index) => {
-                              return (<Item  name = {item.name}/> );
+                              return (<Item  name = {item.name} price = {item.price} description = {item.description}/>  );
                             })
                         );
                      }
@@ -20,4 +20,4 @@ function List(){
         </Context.Consumer>
         );
 }
-export default Store(List);
+export default List;
