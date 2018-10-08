@@ -9,7 +9,7 @@ export class Login extends Component{
         super();
         this.state = {
             username : "",
-            email : "",
+            email : ""
         };
         this.handleRequest = this.handleRequest.bind(this);
     }

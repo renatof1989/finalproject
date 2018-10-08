@@ -1,6 +1,9 @@
 const getState = (scope) => {
     return {
         store: {
+            
+            
+            
             posts:[
                 {
                     title: 'This is a World Post',
@@ -124,7 +127,11 @@ const getState = (scope) => {
             session:{
                 username:'Rigo',
                 email: 'rigocodes@gmail.com',
-                loggedIn: false
+                loggedIn: false,
+                user:  {firstname:"Rigo",
+                 lastname:"Fuentes",
+                 address:"1234 American Way Miami, Fl. 33126"
+                }
             },
             
             cart:[
