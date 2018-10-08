@@ -10,7 +10,7 @@ const getState = (scope) => {
                     author: 'Denise A',
                     image: 'https://venturebeat.com/wp-content/uploads/2015/09/Screen-Shot-2015-09-03-at-13.43.14-e1441259794560.png',
                     thumbnail: 'https://media.takealot.com/covers_tsins/50045787/50045787-1-listgrid.jpg',
-                    likes:3
+                    likes:false
                 },
                 {
                     title: 'This is a Design Post',
@@ -20,7 +20,7 @@ const getState = (scope) => {
                     author: 'Guy B',
                     image: 'https://i.pinimg.com/236x/1d/31/bc/1d31bc8e1e2647e73068f89937151bdd--graphic-design-posters-design-trends.jpghttps://i.pinimg.com/236x/1d/31/bc/1d31bc8e1e2647e73068f89937151bdd--graphic-design-posters-design-trends.jpg',
                     thumbnail: 'https://3.imimg.com/data3/CD/EL/MY-4359573/geographical-world-globe-250x250.jpg',
-                    likes: 10
+                    likes: false
                 },
                 {
                     title: 'This is a Coding Post',
@@ -30,7 +30,7 @@ const getState = (scope) => {
                     author: 'Mr. Robot',
                     image: 'https://cdn-images-1.medium.com/max/1081/1*fLC9_LpA53j2t_UUumTEVA.jpeg',
                     thumbnail: 'https://www.technipixel.com/products/Technipixel_products-04.jpg',
-                    likes: 25
+                    likes: false
                 },
                 {
                     title: 'AI is Now Capable of Building Computers',
@@ -40,7 +40,7 @@ const getState = (scope) => {
                     author: 'O. Canner',
                     image: 'https://images.pexels.com/photos/39349/teens-robot-future-science-39349.jpeg?auto=compress&cs=tinysrgb&h=400&w=900',
                     thumbnail: 'https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=350',
-                    likes: 60
+                    likes: false
                 },
                 {
                     title: 'Doctors Say Carpel Tunnel is Leading Cause of Depression',
@@ -50,7 +50,7 @@ const getState = (scope) => {
                     author: 'Hand Hurtson',
                     image: 'https://images.pexels.com/photos/87584/pexels-photo-87584.jpeg?auto=compress&cs=tinysrgb&h=400&w=900',
                     thumbnail: 'https://images.pexels.com/photos/948888/pexels-photo-948888.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=250',
-                    likes: 3
+                    likes: false
                 },
                 {
                     title: 'Sitting is the New Smoking',
@@ -60,7 +60,7 @@ const getState = (scope) => {
                     author: 'Stan Seatly',
                     image: 'https://images.pexels.com/photos/846747/pexels-photo-846747.jpeg?auto=compress&cs=tinysrgb&h=350',
                     thumbnail: 'https://images.pexels.com/photos/840996/pexels-photo-840996.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=200&w=250',
-                    likes: 80
+                    likes: false
                 }
             ],
             
