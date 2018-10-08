@@ -2,6 +2,10 @@ body{
     background-color: white;
 }
 
-.container-fluid{
+.container{
     background-color: white;
+}
+
+.title {
+    font-style: italic;
 }
