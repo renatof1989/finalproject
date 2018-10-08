@@ -161,6 +161,7 @@ const getState = (scope) => {
                 let usercart = scope.state.store;
                 usercart.cart.push(product);
                 scope.setState({usercart});
+                alert("You just added " + product.name + " to the cart.");
                 
             },
             isLegalUser: (user) => {
