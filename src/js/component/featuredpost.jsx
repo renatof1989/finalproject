@@ -13,23 +13,27 @@ function TitleList(props){
                             store.posts.map((item, index) => {
                               if (index<=1) {
                               return (<div className="col-6">
-                              <div className="row">
-                              <div className="col-8">
+                              <div className="row-2">
+                              <div className="col-12">
                               <div className="card">
+                           <div class="d-flex align-items-start">
                               <div className="card-body">
-                              <h5 className= "card-title">Title</h5>
                             <p className="text-primary">{item.tags}</p>
                               <h2 key={index}>{item.title}</h2>
                                     <p> {item.date}</p>
                                     <p className= "card-text"></p>
-                                    <p>{item.content.substring(0,60)}</p>  
+                                    <p>{item.content.substring(0,150)}</p>  
                                     <p className= "card-link"></p>
-                                    <link>{item.link}</link></div>
-                                    </div>
-                                    </div>
-                                    <div className="col-4">
+                                    <a href="">Contunie Reading</a>
+                                    <link>{item.link}</link>
+                                    
+                                    <div className="col-3">
                                     <ul className="thumbnails"></ul>
-                                        <img src="http://placehold.it/200x300" alt="200x300"/> 
+                                        <img src="http://placehold.it/200x300" alt="200x300"/>
+                                   </div>
+                                    </div>
+                                    </div>
+                                    </div>
                                     </div>
                                     </div>
                                </div>);
