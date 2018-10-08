@@ -18,7 +18,7 @@ const getState = (scope) => {
                     date: 'Nov 4',
                     tags: ['Design'],
                     author: 'Guy B',
-                    image: 'https://i.pinimg.com/236x/1d/31/bc/1d31bc8e1e2647e73068f89937151bdd--graphic-design-posters-design-trends.jpghttps://i.pinimg.com/236x/1d/31/bc/1d31bc8e1e2647e73068f89937151bdd--graphic-design-posters-design-trends.jpg',
+                    image: 'https://images.pexels.com/photos/6444/pencil-typography-black-design.jpg?auto=compress&cs=tinysrgb&h=350',
                     thumbnail: 'https://3.imimg.com/data3/CD/EL/MY-4359573/geographical-world-globe-250x250.jpg',
                     likes: false
                 },
