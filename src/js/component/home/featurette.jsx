@@ -6,16 +6,16 @@ export function Featurette(props) {
         <div className="row featurette">
             <div className={props.isReverse ? "col-md-7 order-md-2 my-auto" : "col-md-7 my-auto"}>
                 <h2 className="featurette-heading"
-                    style={{fontWeight: "400", lineHeight: "1", letterSpacing: "-0.05rem", fontSize: "50px"}}>
-                    {props.header} <span className="text-muted">{props.headerSilent}</span>
+                    style={{fontWeight: "400", fontSize: "50px"}}>
+                    {props.name}<br /><span className="text-muted">${props.price}</span>
                     </h2>
-                <p className="lead">{props.body}</p>
+                <p style={{fontSize: "1.6rem"}}>{props.description}</p>
             </div>
             <div className="col-md-5">
                 <img className="featurette-image img-fluid mx-auto" 
                 data-src="holder.js/500x500/auto" alt="500x500" 
                 style={{width: "500px", height: "500px"}}                            
-                src={props.src} 
+                src={props.image} 
                 data-holder-rendered="true">
                 </img>
             </div>
@@ -24,10 +24,10 @@ export function Featurette(props) {
 }
 Featurette.propTypes = {
     isReverse: PropTypes.bool,
-    header: PropTypes.string,
-    headerSilent: PropTypes.string,
-    body: PropTypes.string,
-    src: PropTypes.string
+    name: PropTypes.string,
+    price: PropTypes.number,
+    description: PropTypes.string,
+    image: PropTypes.string
 }
 
 export default Featurette;

@@ -1,23 +1,62 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Store,{Context} from '../store/appContext.jsx';
 
-export default class Featurepost extends React.Component {
-    render(){
-      return (
-          <div>
-             <div class="card flex-row flex-wrap">
-            <div class="card-header border-0">
-            <img src="//placehold.it/200" alt=""></img>
-            </div>
-            <div class="card-block px-2">
-            <h4 class="card-title">Title</h4>
-            <p class="card-text">Description</p>
-            <a href="" class="btn btn-primary">BUTTON</a>
-            </div>
-            <div class="w-100"></div>
-            <div class="card-footer w-100 text-muted">
-        </div>
-    </div>
-    </div>
-      );
-    }
+
+function TitleList(props){
+    return(
+
+            <Context.Consumer>
+                {
+                  ({store}) => {
+                        return(
+                            store.posts.map((item, index) => {
+                              if (index<=1) {
+                              return (<div className="col-6">
+                              <div className="row">
+                              <div className="col-8">
+                              <div className="card">
+                              <div className="card-body">
+                              <h5 className= "card-title">Title</h5>
+                            <p className="text-primary">{item.tags}</p>
+                              <h2 key={index}>{item.title}</h2>
+                                    <p> {item.date}</p>
+                                    <p className= "card-text"></p>
+                                    <p>{item.content.substring(0,60)}</p>  
+                                    <p className= "card-link"></p>
+                                    <link>{item.link}</link></div>
+                                    </div>
+                                    </div>
+                                    <div className="col-4">
+                                    <ul className="thumbnails"></ul>
+                                        <img src="http://placehold.it/200x300" alt="200x300"/> 
+                                    </div>
+                                    </div>
+                               </div>);
+                              } else {
+                                  return null ;
+                              }
+                            })
+                        );
+                     }
+                }
+            </Context.Consumer>
+
+
+    );
 }
+
+TitleList.propTypes = {
+    items: PropTypes.array
+    
+
+};
+
+export default Store(TitleList);
+
+
+
+
+ 
+
+              

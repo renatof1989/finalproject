@@ -3,11 +3,7 @@
     z-index: 1;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    right:0;
-    height: 550px;
+    height: 450px;
     margin:auto;
     
 }
@@ -15,13 +11,21 @@
 .cards {
     border: 5px solid white;
     position: relative;
-    height: 800px;
+    height: 700px;
 }
 
 #purchase {
     position: relative;
-    bottom: 0;
+    bottom:0;
    
+}
+
+#description {
+    height: 48px;
+}
+
+.image {
+    height: 350px;
 }
 /* 
 
