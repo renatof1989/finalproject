@@ -64,7 +64,7 @@ export class OurCarousel extends React.Component {
                       <img src={item.src} alt={item.altText} />
                   </div>
                   <div className="text-danger">
-                      <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+                      <CarouselCaption captionText={item.caption} captionHeader={item.caption} cssModule={{color: "red"}}/>
                   </div>
               </Link>
           </CarouselItem>

@@ -4,7 +4,7 @@ import {OurCarousel} from "../component/home/carousel.jsx";
 import {Card} from "../component/home/card.jsx";
 import {Featurette} from "../component/home/featurette.jsx";
 
-import Store,{Context} from '../store/appContext.jsx';
+import {Context} from '../store/appContext.jsx';
 
 export class Home extends React.Component{
     render(){
@@ -26,7 +26,7 @@ export class Home extends React.Component{
                                                     );
                                                 })
                                             }
-                                    />
+                                    />;
                             }
                         }
                     </Context.Consumer>
@@ -56,7 +56,7 @@ export class Home extends React.Component{
                         
                         <Context.Consumer>
                             {
-                                ({store}) => {
+                                ({store,actions}) => {
                                     return (
                                         store.products.map((item, index) => {
                                             return (
@@ -64,10 +64,12 @@ export class Home extends React.Component{
                                                     <hr className="featurette-divider my-5" />
                         
                                                     <Featurette isReverse={(index % 2 === 0) ? false : true}
-                                                                name={item.name}
-                                                                price={item.price}
-                                                                description={item.description}
-                                                                image={item.image}
+                                                                product={item}
+                                                                button={
+                                                                    <React.Fragment>
+                                                                        <button className="btn btn-primary" onClick={() => actions.addProductToCart(item)}>Add to Cart</button>
+                                                                    </React.Fragment>
+                                                                }
                                                                 />
                                                 </React.Fragment>
                                             );
@@ -84,4 +86,4 @@ export class Home extends React.Component{
     }
 }
 
-export default Store(Home);
+export default Home;
