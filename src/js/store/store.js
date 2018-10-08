@@ -147,12 +147,15 @@ const getState = (scope) => {
                     description: 'This will be a hit at your next party'
                 }
             ],
+            
             demo:[
                 {
-                    title:"FIRST"
+                    title:"FIRST",
+                    background: "red"
                 },
                 {
-                    title:"SECOND"
+                    title:"SECOND",
+                    background: "blue"
                 }
             ]
         },
@@ -160,6 +163,7 @@ const getState = (scope) => {
             addProductToCart: (product) => {
                 
             },
+            
             isLegalUser: (user) => {
                 
                 let store = scope.state.store;
@@ -168,6 +172,12 @@ const getState = (scope) => {
                     scope.setState({store});
                     return true;
                 } 
+            },
+            
+            changeColor: (element, color) => {
+                let store = scope.state.store;
+                store.demo[element].background = color;
+                scope.setState({store});
             }
         }
     };
