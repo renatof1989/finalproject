@@ -1,9 +1,8 @@
 import React, {Component} from "react";
+import {Context} from '../store/appContext.jsx';
 
 
 // Local Imports
-import NavBar from "./navbar";
-import Footer from "./footer";
 
 
 export class UserInfo extends Component{
@@ -12,10 +11,24 @@ export class UserInfo extends Component{
         return(
 
             <div className=" p-5">
-                <NavBar />
-
+                <Context.Consumer>
+                    {
+                        ({store}) => {
+                           if (store.session.loggedIn){
+                            return (
+                                <ul>
+                                    <li>Hello {store.session.username}!</li>
+                                    <li>{store.session.user.firstname}</li>
+                                    <li>{store.session.user.lastname}</li>
+                                    <li>{store.session.user.address}</li>
+                                </ul>
+                                );
+                        }
+                    }
+                }
+                </Context.Consumer>           
                 {/* <User data = {this.state[0]} */}
-                <Footer />
+       
             </div>
         );
     }
