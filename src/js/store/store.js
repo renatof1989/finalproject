@@ -168,6 +168,12 @@ const getState = (scope) => {
                 
             },
             
+            deleteItemInCart: (product) => {
+                let mistake = scope.state.store;
+                mistake.cart.splice(product, 1);
+                scope.setState(mistake);
+            },
+            
             isLegalUser: (user) => {
                 
                 let store = scope.state.store;

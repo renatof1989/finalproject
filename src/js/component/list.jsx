@@ -8,11 +8,11 @@ function List(){
     return(
         <Context.Consumer>
                 {
-                     ({store}) => {
+                     ({store, actions}) => {
                         
                         return(
                             store.cart.map((item, index) => {
-                              return (<Item  name = {item.name} price = {item.price} description = {item.description}/>  );
+                              return (<Item chiken = {() => actions.deleteItemInCart(item)} name = {item.name} price = {item.price} description = {item.description}/>  );
                             })
                         );
                      }
