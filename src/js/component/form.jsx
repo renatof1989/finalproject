@@ -2,7 +2,7 @@ import React from 'react';
 
 function Form() {
     return(
-        <form className="needs-validation col-6" noValidate>
+        <form className="needs-validation col-6">
             <div className="form-row">
                 <div className="col-md-6 mb-3 p-1">
                     <label htmlFor="validationServer01">First name</label>
@@ -56,7 +56,12 @@ function Form() {
                     <label htmlFor="validationServer03">Country</label>
                     <select id="inputState" className="form-control">
                         <option value>Country</option>
-                        <option>...</option>
+                        <option>USA</option>
+                        <option>Canada</option>
+                        <option>UK</option>
+                        <option>Brazil</option>
+                        <option>Australia</option>
+                        <option>Egypt</option>
                     </select>
                     <div className="invalid-feedback">
               Please provide a valid city.
@@ -66,7 +71,18 @@ function Form() {
                     <label htmlFor="validationServer04">State</label>
                     <select id="inputState" className="form-control">
                         <option value>State</option>
-                        <option>...</option>
+                        <option>FL</option>
+                        <option>GA</option>
+                        <option>NY</option>
+                        <option>CA</option>
+                        <option>TX</option>
+                        <option>DE</option>
+                        <option>AR</option>
+                        <option>CO</option>
+                        <option>AZ</option>
+                        <option>CT</option>
+                        <option>AK</option>
+                        <option>HI</option>
                     </select>
                     <div className="invalid-feedback">
                     </div>
@@ -162,7 +178,7 @@ function Form() {
             <button className="btn btn-primary col-md-12 mb-3 mt-4" type="submit">Continue to checkout</button>
         </form>
         
-  
+        
     
     
 
