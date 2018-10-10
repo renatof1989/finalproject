@@ -44,6 +44,7 @@ class NavBar extends Component{
                                         <button type="button" className="btn btn-dark">Demo</button>
                                     </Link>                            
                                 </li>
+                                
                             </ul>
 
                             <form className="form-inline my-2 my-lg-0">
@@ -53,7 +54,9 @@ class NavBar extends Component{
                                                if (store.session.loggedIn){
                                                 return (
                                                     <ul className="navbar-nav">
-                                                        <li className="nav-item"><a className="nav-link" href = "">Hello {store.session.username}! </a></li>
+                                                        <li className="nav-item">
+                                                            <Link to="/userInfo"><a className="nav-link" href = "">
+                                                        Hello {store.session.username}! </a></Link></li>
                                                     </ul>
                                                     );
                                             }
