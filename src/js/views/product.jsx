@@ -20,7 +20,7 @@ export class Product extends React.Component{
                         <Products />
                     </div>
                     <Link to="/checkout">
-                        <button type="button" className="btn btn-primary btn-lg btn-block mt-2">Proceed to checkout</button>
+                        <button type="button" className="btn btn-primary btn-lg btn-block mt-2 mb-4">Proceed to checkout</button>
                     </Link>
                 </div>
             </React.Fragment>
