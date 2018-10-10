@@ -31,7 +31,7 @@ export class Layout extends React.Component{
                         <Route path="/post/:theid" component={Post} />
                         <Route path="/checkout" component={Checkout} />
                         <Route path="/login" component={Login} />
-                        <Route path="/info" component={UserInfo} />
+                        <Route path="/userinfo" component={UserInfo} />
                         <Route path="/demo" component={Demo} />
                         <Route path="/single/:theid" component={Single} />
                         <Route render={() => <h1>Not found!</h1>} />

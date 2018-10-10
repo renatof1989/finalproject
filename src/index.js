@@ -10,6 +10,11 @@ import './styles/index.css';
 
 //import your own components
 import Layout from './js/layout.jsx';
+import { library } from '@fortawesome/fontawesome-svg-core';
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faTrash);
 
 //render your react application
 ReactDOM.render(

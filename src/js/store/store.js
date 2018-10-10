@@ -8,7 +8,11 @@ const getState = (scope) => {
             session:{
                 username:'Rigo',
                 email: 'rigocodes@gmail.com',
-                loggedIn: false
+                loggedIn: false,
+                user:  {firstname:"Rigo",
+                 lastname:"Fuentes",
+                 address:"1234 American Way Miami, Fl. 33126"
+                }
             },
             
             cart:[],
@@ -31,6 +35,12 @@ const getState = (scope) => {
                 scope.setState({usercart});
                 alert("You just added " + product.name + " to the cart.");
                 
+            },
+            
+            deleteItemInCart: (product) => {
+                let mistake = scope.state.store;
+                mistake.cart.splice(product, 1);
+                scope.setState(mistake);
             },
             
             isLegalUser: (user) => {

@@ -18,6 +18,6 @@ Card.propTypes = {
     title: PropTypes.string,
     content: PropTypes.string,
     link: PropTypes.string
-}
+};
 
 export default Card;
