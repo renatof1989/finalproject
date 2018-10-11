@@ -7,12 +7,12 @@ function List(){
     
     return(
         <Context.Consumer>
-                {
+            {
                      ({store, actions}) => {
                         
                         return(
                             store.cart.map((item, index) => {
-                              return (<Item chiken = {() => actions.deleteItemInCart(item)} name = {item.name} price = {item.price} description = {item.description}/>  );
+                              return (<Item key={index} chiken = {() => actions.deleteItemInCart(item)} name = {item.name} price = {item.price} description = {item.description}/>  );
                             })
                         );
                      }
