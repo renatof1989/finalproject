@@ -32,7 +32,7 @@ const Store = (PassedComponent) =>{
         
         
             fetch('https://random-scripts-nachovz.c9users.io/collaborative-react-backend/cart.json')
-            .then(random => {random.json();})
+            .then(random => random.json())
             .then(iguana => { 
               let {store} = this.state;
               store.cart = iguana;
