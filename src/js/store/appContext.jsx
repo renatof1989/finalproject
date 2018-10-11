@@ -22,7 +22,7 @@ const Store = (PassedComponent) =>{
               .catch(error => console.log(error));
               
             fetch('https://random-scripts-nachovz.c9users.io/collaborative-react-backend/posts.json')
-            .then(response => {response.json();})
+            .then(response => response.json())
             .then(iguana => { 
               let {store} = this.state;
               store.posts = iguana;
