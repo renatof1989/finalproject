@@ -9,9 +9,9 @@ export class Blog extends React.Component{
   render(){
     return(
         <div className="container">
-          <div className="row-justify-content-center">
+          <div className="row-justify-content-center ">
             <div className="col-12">
-              <div className="jumbotron">
+              <div className="jumbotron bg-dark text-white">
                 <Jumbotron/>
               </div>
             </div>
