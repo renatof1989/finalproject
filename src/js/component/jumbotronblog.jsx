@@ -1,11 +1,37 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Store,{Context} from '../store/appContext.jsx';
 
-export default class Jumbotron extends React.Component {
-    render(){
-      return (
-        <div><h1>Test one two three</h1>
-        <p>What is Lorem Ipsum?
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p></div>
-      );
-    }
+
+function Jumbotronblog(props){
+    return(
+
+            <Context.Consumer>
+                {
+                  ({store}) => {
+                        return(
+                            store.posts.map((item, index) => {
+                            if (index<=0) { 
+                              return (<div>
+                              <h2 key={index}>{item.title}</h2>
+                              <p key={index}>{item.content.substring(0,400)}</p>
+                              <a href="">Contunie Reading</a>
+                              <link>{item.link}</link>
+                              </div>);
+                            } else {
+                    return null;
+                            }
+                            })
+                        );
+                  }
+                     }
+                
+            </Context.Consumer>
+    );
 }
+
+Jumbotronblog.propTypes = {
+    items: PropTypes.array
+};
+
+export default Store(Jumbotronblog)
