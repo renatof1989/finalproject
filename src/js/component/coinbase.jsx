@@ -2,29 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Store,{Context} from '../store/appContext.jsx';
 
-import '../../styles/blog.css';
 
-function BlogPost(props){
+function Coinbase(props){
     return(
 
             <Context.Consumer>
                 {
                   ({store}) => {
                         return(
-                            store.posts.map((item, index) => {
+                            store.coinbase.map((item, index) => {
+                             
                               return (<div>
-                              <h2>{item.last}</h2>
+                              <h>Coinbase</h>
+                              <h2 key={index}>{item.price}</h2>
+                              <a href="">Continue Reading</a>
                               </div>);
+                            
                             })
                         );
+                  }
                      }
-                }
+
+                
             </Context.Consumer>
     );
 }
 
-BlogPost.propTypes = {
+Coinbase.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(BlogPost);
+export default Store(Coinbase)

@@ -2,29 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Store,{Context} from '../store/appContext.jsx';
 
-import '../../styles/blog.css';
 
-function BlogPost(props){
+function Braziliex (props){
     return(
 
             <Context.Consumer>
                 {
                   ({store}) => {
                         return(
-                            store.posts.map((item, index) => {
+                            store.braziliex.map((item, index) => {
+                             
                               return (<div>
-                              <h2>{item.last}</h2>
+                              <h>Braziliex</h>
+                              <h2 key={index}>{item.last}</h2>
                               </div>);
+                            
                             })
                         );
+                  }
                      }
-                }
+
+                
             </Context.Consumer>
     );
 }
 
-BlogPost.propTypes = {
+Braziliex.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(BlogPost);
+export default Store(Braziliex)

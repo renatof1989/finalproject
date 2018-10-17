@@ -1,6 +1,18 @@
 const getState = (scope) => {
     return {
         store: {
+            gemini:[],
+            
+            coinbase:[],
+            
+            mercadobitcoin:[],
+            
+            negociecoins:[],
+            
+            bitcambio:[],
+            
+            braziliex:[],
+            
             posts:[],
             
             products:[],
