@@ -3,6 +3,8 @@ const getState = (scope) => {
         store: {
             gemini:[],
             
+            bitstamp:[],
+            
             coinbase:[],
             
             mercadobitcoin:[],
@@ -12,10 +14,6 @@ const getState = (scope) => {
             bitcambio:[],
             
             braziliex:[],
-            
-            posts:[],
-            
-            products:[],
         
             session:{
                 username:'Rigo',
@@ -27,18 +25,6 @@ const getState = (scope) => {
                 }
             },
             
-            cart:[],
-            
-            demo:[
-                {
-                    title:"FIRST",
-                    background: "red"
-                },
-                {
-                    title:"SECOND",
-                    background: "blue"
-                }
-            ]
         },
         actions: {
             addProductToCart: (product) => {

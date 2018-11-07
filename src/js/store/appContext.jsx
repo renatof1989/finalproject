@@ -11,35 +11,6 @@ const Store = (PassedComponent) =>{
         }
         
         componentDidMount() {
-            
-            fetch('https://random-scripts-nachovz.c9users.io/collaborative-react-backend/products.json')
-              .then(response => response.json())
-              .then(data => {
-                  let {store} = this.state;
-                  store.products = data;
-                  this.setState({store});
-              })
-              .catch(error => console.log(error));
-              
-            fetch('https://random-scripts-nachovz.c9users.io/collaborative-react-backend/post.json')
-            .then(response => response.json())
-            .then(iguana => { 
-              let {store} = this.state;
-              store.posts = iguana;
-              this.setState({store});
-              console.log(iguana)
-            })
-            .catch(error => console.log(error));
-        
-        
-            fetch('https://random-scripts-nachovz.c9users.io/collaborative-react-backend/cart.json')
-            .then(random => random.json())
-            .then(iguana => { 
-              let {store} = this.state;
-              store.cart = iguana;
-              this.setState({store});
-            })
-            .catch(error => console.log(error));
 
             fetch('https://api.gemini.com/v1/pubticker/btcusd')
             .then(random => random.json())
@@ -92,6 +63,15 @@ const Store = (PassedComponent) =>{
             .then(apple => { 
               let {store} = this.state;
               store.mercadobitcoin.push(apple);
+              this.setState({store});
+            })
+            .catch(error => console.log(error));
+            
+            fetch('https://www.bitstamp.net/api/v2/ticker/btceur/')
+            .then(random => random.json())
+            .then(apple => { 
+              let {store} = this.state;
+              store.bitstamp.push(apple);
               this.setState({store});
             })
             .catch(error => console.log(error));

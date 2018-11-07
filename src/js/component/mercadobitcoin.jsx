@@ -15,7 +15,6 @@ function Mercadobitcoin (props){
                               return (<div>
                               <h>Mercado Bitoin</h>
                               <h2 key={index}>{item.ticker.last}</h2>
-                              <a href="">Continue Reading</a>
                               </div>);
                             
                             })

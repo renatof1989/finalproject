@@ -15,7 +15,6 @@ function Coinbase(props){
                               return (<div>
                               <h>Coinbase</h>
                               <h2 key={index}>{item.price}</h2>
-                              <a href="">Continue Reading</a>
                               </div>);
                             
                             })
