@@ -59,7 +59,7 @@ export class Login extends Component{
                                                                 this.props.history.push('/');
                                                             }
                                                         }
-                                                    }} className="btn btn-primary" >Submit</button>
+                                                    }} className="btn btn-primary" >Submit <i class="fab fa-bitcoin"></i> </button>
                                         
                                                 </form>
                             
