@@ -10,41 +10,30 @@ export class Cryptomap extends React.Component{
   render(){
     return(
         <div className="container">
-          <div className="row">
-
-            <h1 className="col-12">Coin Compare Project</h1>
             <div className="row">
-                <div className="col-4"><h1>United States</h1>
-                  <UsaExchange/>
+                <h1 className="col-12">Coin Compare Project</h1>
+                <div className="row">
+                    <div className="col-4"><h1>United States</h1>
+                        <UsaExchange/>
+                    </div>
+                    <div className="col-4">
+                        <h1>Brazil</h1>
+                        <Mercadobitcoin/>
+                        <Negociecoins/>
+                        <Bitcambio/>
+                        <Braziliex/>
+                    </div>
+                    <div className="col-4">
+                        <h1>Europe</h1>
+                        <EuroExchange />
+                    </div>
                 </div>
-                <div className="col-4">
-                <h1>Brazil</h1>
-                  <Mercadobitcoin/>
-                  <Negociecoins/>
-                  <Bitcambio/>
-                  <Braziliex/>
-                </div>
-                <div className="col-4">
-                <h1>Europe</h1>
-                  <EuroExchange />
-                </div>
-                </div>
-                </div>
- 
-
-          <div className="row">
-          </div>    
-           
-            
             </div>
-
-
-      
-     
+            <div className="row">
+            </div>    
+        </div>
       );
-      
   }
-  
 }
 
 export default Cryptomap;

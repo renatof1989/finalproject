@@ -48,9 +48,9 @@ export class Login extends Component{
                                                         <input type="userName" ref={(ref) => this.nameTextInput = ref} className="form-control" placeholder="username" />
                                                     </div>
 
-                                                    <div className="form-group">
-                                                        <label>Email Address</label>
-                                                        <input type="email" ref={(ref) => this.emailTextInput = ref} className="form-control" placeholder="email " />
+                                                    <div class="form-group">
+                                                        <label for="exampleInputPassword1">Password</label>
+                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
                                                     </div>
 
                                                     <button type="submit" onClick = {(event) => { 

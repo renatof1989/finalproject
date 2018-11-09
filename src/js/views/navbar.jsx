@@ -30,7 +30,11 @@ class NavBar extends Component{
                                         <button type="button" className="btn btn-success">Login</button>
                                     </Link>                            
                                 </li>
-                                
+                                <li className="nav-item">
+                                    <Link to="/sign_up">
+                                        <button type="button" className="btn btn-info" >Sign Up</button>
+                                    </Link>                            
+                                </li>                                
                             </ul>
 
                             <form className="form-inline my-2 my-lg-0">
@@ -49,8 +53,6 @@ class NavBar extends Component{
                                         }
                                     }
                                 </Context.Consumer>
-                                <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-                                <button className="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                             </form>
                         </div>
                     </nav>

@@ -9,6 +9,7 @@ import Store from './store/appContext.jsx';
 import Navbar from './views/navbar.jsx';
 import Footer from "./views/footer.jsx";
 import MyAccount from "./views/account.jsx";
+import Sign_up from './views/sign_up.jsx';
 
 export class Layout extends React.Component{
     
@@ -23,6 +24,7 @@ export class Layout extends React.Component{
                         <Route path="/login" component={Login} />
                         <Route path="/userinfo" component={UserInfo} />
                         <Route path="/account" component={MyAccount} />
+                        <Route path="/sign_up" component={Sign_up} />
                         <Route render={() => <h1>Not found!</h1>} />
                     </Switch>
                     <Footer />
