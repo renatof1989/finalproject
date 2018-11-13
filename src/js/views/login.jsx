@@ -9,7 +9,7 @@ export class Login extends Component{
         super();
         this.state = {
             username : "",
-            email : ""
+            password : ""
         };
         this.handleRequest = this.handleRequest.bind(this);
     }
@@ -18,10 +18,10 @@ export class Login extends Component{
 
         event.preventDefault();
         
-        if (this.nameTextInput.value && this.emailTextInput.value){
+        if (this.nameTextInput.value && this.passwordTextInput.value){
             const state = this.state;
             state.username = this.nameTextInput.value;
-            state.email = this.emailTextInput.value;
+            state.password = this.passwordTextInput.value;
             this.setState(state);
             return true;
         } 
@@ -45,12 +45,12 @@ export class Login extends Component{
                                                 <form >
                                                     <div className="form-group">
                                                         <label>User Name</label>
-                                                        <input type="userName" ref={(ref) => this.nameTextInput = ref} className="form-control" placeholder="username" />
+                                                        <input type="userName" ref={(ref) => this.nameTextInput = ref} class="form-control" placeholder="username" />
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="exampleInputPassword1">Password</label>
-                                                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                                                        <input type="password" ref={(ref) => this.passwordTextInput = ref} class="form-control" placeholder="Password"/>
                                                     </div>
 
                                                     <button type="submit" onClick = {(event) => { 

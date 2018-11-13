@@ -17,13 +17,12 @@ const getState = (scope) => {
         
             session:{
                 username:'Rigo',
-                email: 'rigocodes@gmail.com',
+                password: "password",
                 loggedIn: false,
-                user:  {firstname:"Rigo",
-                 lastname:"Fuentes",
-                 address:"1234 American Way Miami, Fl. 33126"
+                user:  {name: "Renato Frores",
+                email: 'rigocodes@gmail.com'
                 }
-            },
+            }
             
         },
         actions: {
@@ -44,7 +43,7 @@ const getState = (scope) => {
             isLegalUser: (user) => {
                 
                 let store = scope.state.store;
-                if (user.username === store.session.username && user.email === store.session.email){
+                if (user.username === store.session.username && user.password === store.session.password){
                     store.session.loggedIn = true;
                     scope.setState({store});
                     return true;

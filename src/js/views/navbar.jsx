@@ -32,7 +32,7 @@ class NavBar extends Component{
                                 </li>
                                 <li className="nav-item">
                                     <Link to="/sign_up">
-                                        <button type="button" className="btn btn-info" >Sign Up</button>
+                                        <button type="button" className="btn btn-info">Sign Up</button>
                                     </Link>                            
                                 </li>                                
                             </ul>
