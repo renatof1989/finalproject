@@ -1,0 +1,11 @@
+
+.pic2 {
+  background-image: url("../img/city.jpeg");
+  }
+  
+  .intro{
+  font-size: 1rem;
+}
+.hidden{
+  margin-top: -2px;
+}

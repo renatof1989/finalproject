@@ -7,6 +7,8 @@ class NavBar extends Component{
         return(
             <React.Fragment>
                 <div>
+                
+                
                     <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" >
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mr-auto">
@@ -20,33 +22,70 @@ class NavBar extends Component{
                                         <button type="button" className="btn btn-dark">Crypto Map</button>
                                     </Link>                             
                                 </li>
-                                <li className="nav-item">
-                                    <Link to="/account">
-                                        <button type="button" className="btn btn-dark">My Account</button>
-                                    </Link>                             
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/login">
-                                        <button type="button" className="btn btn-success">Login</button>
-                                    </Link>                            
-                                </li>
-                                <li className="nav-item">
-                                    <Link to="/sign_up">
-                                        <button type="button" className="btn btn-info">Sign Up</button>
-                                    </Link>                            
-                                </li>                                
+
+                                
+                                <Context.Consumer>
+                                    {
+                                        ({store, actions}) => {
+                                               if (store.session.loggedIn){
+                                                return (
+                                                    <ul className="navbar-nav">
+                                                        <li className="nav-item">
+                                                            <Link to="/account">
+                                                                <button type="button" className="btn btn-dark">My Account</button>
+                                                            </Link>                             
+                                                        </li>
+                                                            
+                                                    </ul>
+                                                    );
+                                            }
+                                        }
+                                    }
+                                </Context.Consumer>                                
+                                
+                                <Context.Consumer>
+                                    {
+                                        ({store}) => {
+                                               if (!store.session.loggedIn){
+                                                return (
+                                                    <ul className="navbar-nav mr-auto">
+                                                        <li className="nav-item">
+                                                            <Link to="/login">
+                                                                <button type="button" className="btn btn-success">Login</button>
+                                                            </Link>                            
+                                                        </li>
+                                                        <li className="nav-item">
+                                                            <Link to="/sign_up">
+                                                                <button type="button" className="btn btn-info">Sign Up</button>
+                                                            </Link>                            
+                                                        </li>
+                                                    </ul>
+                                                    );
+                                            }
+                                        }
+                                    }
+                                </Context.Consumer>
+                                
+                                
+                                
                             </ul>
 
                             <form className="form-inline my-2 my-lg-0">
                                 <Context.Consumer>
                                     {
-                                        ({store}) => {
+                                        ({store, actions}) => {
                                                if (store.session.loggedIn){
                                                 return (
                                                     <ul className="navbar-nav">
                                                         <li className="nav-item">
                                                             <Link to="/userInfo"><a className="nav-link" href = "">
                                                         Hello {store.session.username}! </a></Link></li>
+                                                        <li className="nav-item">
+                                                            <Link to="/login">
+                                                                <button type="button" onClick = {() => actions.logOut()} className="btn btn-danger">Log Out</button>
+                                                            </Link>                            
+                                                        </li>
+                                                            
                                                     </ul>
                                                     );
                                             }
@@ -56,6 +95,9 @@ class NavBar extends Component{
                             </form>
                         </div>
                     </nav>
+                    
+                    
+                    
                 </div>
             </React.Fragment>
         );

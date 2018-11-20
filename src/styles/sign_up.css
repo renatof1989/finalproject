@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
+.pic1 {
+  background-image: url("../img/bitcoin.jpeg");
+  color: white;
+}
 
 body{
     margin: 0;
@@ -9,11 +13,17 @@ body{
     color: #212529;
     text-align: left;
     background-color: #f5f8fa;
+    
 }
 
+.container
+{
+    opacity: 0.9;
+    color: black;
+}
 .my-form
 {
-    padding-top: 1.5rem;
+    padding-top: 3.5rem;
     padding-bottom: 1.5rem;
 }
 

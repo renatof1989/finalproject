@@ -50,6 +50,16 @@ const getState = (scope) => {
                 } 
             },
             
+            logOut: () => {
+                
+                let store = scope.state.store;
+                
+                if (store.session.loggedIn) {
+                    store.session.loggedIn = false;
+                    scope.setState({store});
+                }
+            },            
+            
             changeColor: (element, color) => {
                 let store = scope.state.store;
                 store.demo[element].background = color;

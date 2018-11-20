@@ -1,10 +1,12 @@
 import React from 'react';
+import '../../styles/sign_up.css';
+
 
 export class Sign_up extends React.Component{
   render(){
-    return(
+    return(<div class ="pic1">
         <main class="my-form">
-            <div class="cotainer">
+            <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-md-8">
                         <div class="card">
@@ -49,6 +51,7 @@ export class Sign_up extends React.Component{
             </div>
         
         </main>
+    </div>
               );
           }
         }
