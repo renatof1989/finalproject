@@ -31,4 +31,4 @@ Braziliex.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(Braziliex)
+export default Store(Braziliex);
