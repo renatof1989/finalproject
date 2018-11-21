@@ -78,8 +78,8 @@ class NavBar extends Component{
                                                 return (
                                                     <ul className="navbar-nav">
                                                         <li className="nav-item">
-                                                            <Link to="/userInfo"><a className="nav-link" href = "">
-                                                        Hello {store.session.username}! </a></Link></li>
+                                                            <Link to="/userInfo" className="nav-link">
+                                                        Hello {store.session.username}!</Link></li>
                                                         <li className="nav-item">
                                                             <Link to="/login">
                                                                 <button type="button" onClick = {() => actions.logOut()} className="btn btn-danger">Log Out</button>
