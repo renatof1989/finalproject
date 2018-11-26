@@ -1,10 +1,13 @@
 import React from "react";
 import '../../styles/home.css';
 
+import BasicMap from "../component/tooltip.jsx";
+
 export class Home extends React.Component{
     render(){
         return(
             <div>
+                <BasicMap />
                 <div className="row hidden">
                     <div className="col-12">
                         <h1>Hiding Under the NAV BAR</h1>
