@@ -44,3 +44,6 @@ body{
     margin-left: 0;
     margin-right: 0;
 }
+.card-header{
+    font-family: 'Sedgwick Ave', cursive;
+}

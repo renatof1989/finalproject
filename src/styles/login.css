@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Sedgwick+Ave');
 
 .mainer {
   height: 100vh;
@@ -38,6 +39,7 @@
           box-sizing: border-box;
   padding: 10px;
   font-size: 16px;
+  font-family: 'Sedgwick Ave', cursive;
 }
 .form-signin .form-control:focus {
   z-index: 2;
@@ -46,9 +48,16 @@
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+  
 }
 .form-signin input[type="password"] {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+.form-group{
+  font-family: 'Sedgwick Ave', cursive;
+}
+button {
+  font-family: 'Sedgwick Ave', cursive;
 }
