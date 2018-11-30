@@ -12,9 +12,9 @@ function Gemini(props){
                         return(
                             store.gemini.map((item, index) => {
                              
-                              return (<div>
-                              <h>Gemini</h>
-                              <h2 key={index}>{item.ask}</h2>
+                              return (<div key={index}>
+                              <h2>Gemini</h2>
+                              <h2>{item.ask}</h2>
                               </div>);
                             })
                         );

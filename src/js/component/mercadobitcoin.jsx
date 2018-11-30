@@ -12,9 +12,9 @@ function Mercadobitcoin (props){
                         return(
                             store.mercadobitcoin.map((item, index) => {
                              
-                              return (<div>
-                              <h>Mercado Bitoin</h>
-                              <h2 key={index}>{item.ticker.last}</h2>
+                              return (<div key={index}>
+                              <h2>Mercado Bitoin</h2>
+                              <h2>{item.ticker.last}</h2>
                               </div>);
                             
                             })
