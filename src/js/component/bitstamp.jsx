@@ -12,10 +12,10 @@ function Bitstamp (props){
                         return(
                             store.bitstamp.map((item, index) => {
                              
-                              return (<div>
-                              <h>Bitstamp</h>
+                              return (<div key={index}>
+                              <h2>Bitstamp</h2>
                               test
-                              <h2 key={index}>{item.last}</h2>
+                              <h2>{item.last}</h2>
                               </div>);
                             
                             })

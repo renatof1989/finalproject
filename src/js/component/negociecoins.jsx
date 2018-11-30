@@ -12,9 +12,9 @@ function Negociecoins(props){
                   ({store}) => {
                         return(
                             store.negociecoins.map((item, index) => {
-                              return (<div>
-                              <h>Negocie Coins</h>
-                              <h2 key={index}>{item.last}</h2>
+                              return (<div key={index}>
+                              <h2>Negocie Coins</h2>
+                              <h2>{item.last}</h2>
                               </div>);
                             })
                         );

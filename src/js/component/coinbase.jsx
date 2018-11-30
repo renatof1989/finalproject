@@ -12,9 +12,9 @@ function Coinbase(props){
                         return(
                             store.coinbase.map((item, index) => {
                              
-                              return (<div>
-                              <h>Coinbase</h>
-                              <h2 key={index}>{item.price}</h2>
+                              return (<div key={index}>
+                              <h2>Coinbase</h2>
+                              <h2>{item.price}</h2>
                               </div>);
                             
                             })

@@ -12,9 +12,9 @@ function Braziliex (props){
                         return(
                             store.braziliex.map((item, index) => {
                              
-                              return (<div>
-                              <h>Braziliex</h>
-                              <h2 key={index}>{item.last}</h2>
+                              return (<div key={index}>
+                              <h2>Braziliex</h2>
+                              <h2>{item.last}</h2>
                               </div>);
                             
                             })
