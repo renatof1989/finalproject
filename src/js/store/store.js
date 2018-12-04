@@ -34,19 +34,13 @@ const getState = (scope) => {
                         return coinbase + gemini;
                     case "Brazil":
                         //Mercado Bitcoin Information
-                        let mercadobitcoinbuy = scope.state.store.mercadobitcoin.length > 0 ? "MERCADO BITCOIN: Buy rate: $"+scope.state.store.mercadobitcoin["0"].ticker.buy+"" : " no data";
-                        let mercadobitcoinsell = scope.state.store.mercadobitcoin.length > 0 ? "Sell rate: $"+scope.state.store.mercadobitcoin["0"].ticker.sell+"" : " no data";
-                        let mercadobitcoinlast = scope.state.store.mercadobitcoin.length > 0 ? "Last sold for: $"+scope.state.store.mercadobitcoin["0"].ticker.last+"" : " no data";
+                        let mercadobitcoinlast = scope.state.store.mercadobitcoin.length > 0 ? "MercadoBitcoin: R$"+scope.state.store.mercadobitcoin["0"].ticker.last+"" : " ";
                         //Negocie Coin Information
-                        let negociecoinsbuy = scope.state.store.negociecoins.length > 0 ? "NEGOCIE COIN: Buy rate: $"+scope.state.store.negociecoins["0"].buy+"" : " no data";
-                        let negociecoinssell = scope.state.store.negociecoins.length > 0 ? "Sell rate: $"+scope.state.store.negociecoins["0"].sell+"" : " no data";
-                        let negociecoinslast = scope.state.store.negociecoins.length > 0 ? "Last sold for: $"+scope.state.store.negociecoins["0"].last+"" : " no data";
+                        let negociecoinslast = scope.state.store.negociecoins.length > 0 ? " Negocie Coins: R$"+scope.state.store.negociecoins["0"].last+"" : " ";
                         //Bitcambio Information
-                        let bitcambiobuy = scope.state.store.bitcambio.length > 0 ? "BITCAMBIO: Buy rate: $"+scope.state.store.bitcambio["0"].buy+"" : " no data";
-                        let bitcambiosell = scope.state.store.bitcambio.length > 0 ? "Sell rate: $"+scope.state.store.bitcambio["0"].sell+"" : " no data";
-                        let bitcambiolast = scope.state.store.bitcambio.length > 0 ? "Last sold for: $"+scope.state.store.bitcambio["0"].last+"" : " no data";
+                        let bitcambiolast = scope.state.store.bitcambio.length > 0 ? "BitCambio R$"+scope.state.store.bitcambio["0"].last+"" : " ";
                         
-                        return mercadobitcoinbuy + '      ' + mercadobitcoinsell + '      ' + mercadobitcoinlast + '      ' + negociecoinsbuy + '      ' + negociecoinssell + '      ' + negociecoinslast + '      ' + bitcambiobuy + '      ' + bitcambiosell + '      ' + bitcambiolast;
+                        return mercadobitcoinlast + negociecoinslast + bitcambiolast;
                        
                         //case "Germany" || "France":
                         /*case "Canada":
