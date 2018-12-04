@@ -6,24 +6,23 @@ import Store,{Context} from '../store/appContext.jsx';
 function Bitcambio (props){
     return(
 
-            <Context.Consumer>
-                {
+        <Context.Consumer>
+            {
                   ({store}) => {
                         return(
                             store.bitcambio.map((item, index) => {
                              
                               return (<div key={index}>
-                              <h2>Bitcambio</h2>
-                              <h2>{item.last}</h2>
+                                  <p><strong>Bitcambio</strong></p>
+                                  <p>R${item.last}</p>
                               </div>);
-                            
                             })
                         );
                   }
                      }
 
                 
-            </Context.Consumer>
+        </Context.Consumer>
     );
 }
 
@@ -31,4 +30,4 @@ Bitcambio.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(Bitcambio)
+export default Store(Bitcambio);

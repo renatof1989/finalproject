@@ -6,25 +6,21 @@ import Store,{Context} from '../store/appContext.jsx';
 function Bitstamp (props){
     return(
 
-            <Context.Consumer>
-                {
-                  ({store}) => {
+        <Context.Consumer>
+            {
+                 ({store}) => {
                         return(
                             store.bitstamp.map((item, index) => {
                              
                               return (<div key={index}>
-                              <h2>Bitstamp</h2>
-                              test
-                              <h2>{item.last}</h2>
+                                  <p><strong>Bitstamp</strong></p>
+                                  <p>€{item.last}</p>
                               </div>);
-                            
                             })
                         );
                   }
                      }
-
-                
-            </Context.Consumer>
+        </Context.Consumer>
     );
 }
 

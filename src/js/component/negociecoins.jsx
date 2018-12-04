@@ -5,29 +5,24 @@ import Store,{Context} from '../store/appContext.jsx';
 function Negociecoins(props){
     return(
 
-            <Context.Consumer>
-
-                
-                {
+        <Context.Consumer>
+            {
                   ({store}) => {
                         return(
                             store.negociecoins.map((item, index) => {
                               return (<div key={index}>
-                              <h2>Negocie Coins</h2>
-                              <h2>{item.last}</h2>
+                                  <p><strong>Negocie Coins</strong></p>
+                                  <p>R${item.last}</p>
                               </div>);
                             })
                         );
                   }
-                     }
-
-                
-            </Context.Consumer>
+                   }
+        </Context.Consumer>
     );
 }
-
 Store.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(Negociecoins)
+export default Store(Negociecoins);

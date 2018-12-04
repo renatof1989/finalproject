@@ -6,27 +6,23 @@ import Store,{Context} from '../store/appContext.jsx';
 function Braziliex (props){
     return(
 
-            <Context.Consumer>
-                {
+        <Context.Consumer>
+            {
                   ({store}) => {
                         return(
                             store.braziliex.map((item, index) => {
-                             
                               return (<div key={index}>
-                              <h2>Braziliex</h2>
-                              <h2>{item.last}</h2>
+                                  <p><strong>Braziliex</strong></p>
+                                  <p>R${item.last}</p>
+                                  <p>{item.percentChange}</p>
                               </div>);
-                            
                             })
                         );
                   }
                      }
-
-                
-            </Context.Consumer>
+        </Context.Consumer>
     );
 }
-
 Braziliex.propTypes = {
     items: PropTypes.array
 };

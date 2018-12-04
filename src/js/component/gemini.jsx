@@ -6,15 +6,15 @@ import Store,{Context} from '../store/appContext.jsx';
 function Gemini(props){
     return(
 
-            <Context.Consumer>
-                {
+        <Context.Consumer>
+            {
                   ({store}) => {
                         return(
                             store.gemini.map((item, index) => {
                              
                               return (<div key={index}>
-                              <h2>Gemini</h2>
-                              <h2>{item.ask}</h2>
+                                  <p><strong>Gemini</strong></p>
+                                  <p>${item.last}</p>
                               </div>);
                             })
                         );
@@ -22,7 +22,7 @@ function Gemini(props){
                      }
 
                 
-            </Context.Consumer>
+        </Context.Consumer>
     );
 }
 
@@ -30,4 +30,4 @@ Gemini.propTypes = {
     items: PropTypes.array
 };
 
-export default Store(Gemini)
+export default Store(Gemini);

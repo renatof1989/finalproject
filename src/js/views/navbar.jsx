@@ -71,6 +71,7 @@ class NavBar extends Component{
                             </ul>
 
                             <form className="form-inline my-2 my-lg-0">
+                                <h5 class=" btn-primary">Bitcoinage Check!</h5>
                                 <Context.Consumer>
                                     {
                                         ({store, actions}) => {

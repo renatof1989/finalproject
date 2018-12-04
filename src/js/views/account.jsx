@@ -35,8 +35,10 @@ export class MyAccount extends React.Component{
                                         <input type="" class="form-control" id="formGroupExampleInput" placeholder="Notify me when lower than this number"/>
                                         <label for="formGroupExampleInput2">When price rises above:</label>
                                         <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Notify me when higher than this number"/>    
-                                    </div>                                    
+                                    </div>
+                                    <input class="btn btn-primary" type="submit" value="Update"/> 
                                 </ul>
+
                                 );
                         }
                     }

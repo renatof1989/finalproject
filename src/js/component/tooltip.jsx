@@ -65,7 +65,7 @@ class BasicMap extends Component {
 															fill: "#607D8B",
 															stroke: "#607D8B",
 															strokeWidth: 0.75,
-															outline: "none"
+															outline: "none",
 														},
 														pressed: {
 															fill: "#FF5722",

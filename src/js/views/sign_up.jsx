@@ -4,7 +4,7 @@ import '../../styles/sign_up.css';
 
 export class Sign_up extends React.Component{
   render(){
-    return(<div class ="pic1">
+    return(<div class ="pic1 container-fluid">
         <main class="my-form">
             <div class="container">
                 <div class="row justify-content-center">

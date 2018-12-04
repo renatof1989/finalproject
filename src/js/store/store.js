@@ -19,8 +19,8 @@ const getState = (scope) => {
                 username:'Rigo',
                 password: "password",
                 loggedIn: false,
-                user:  {name: "Renato Frores",
-                email: 'rigocodes@gmail.com'
+                user:  {name: "Joe Shmo",
+                email: 'JoeShmoCodes2@gmail.com'
                 }
             }
             
@@ -29,9 +29,9 @@ const getState = (scope) => {
             findCountryData: (countryName) => {
                 switch(countryName) {
                     case "United States":
-                        let gemini = scope.state.store.gemini.length > 0 ? "Gemini: $"+scope.state.store.gemini["0"].ask+"" : " no data";
-                        let coinbase = scope.state.store.coinbase.length > 0 ? "Coinbase: $"+scope.state.store.coinbase["0"].message+"" : " no data";
-                        return coinbase + '     ' + gemini;
+                        let gemini = scope.state.store.gemini.length > 0 ? "Gemini: $"+scope.state.store.gemini["0"].ask+" " : "";
+                        let coinbase = scope.state.store.coinbase.length > 0 ? "Coinbase: $"+scope.state.store.coinbase["0"].ask+" " : "";
+                        return coinbase + gemini;
                     case "Brazil":
                         //Mercado Bitcoin Information
                         let mercadobitcoinbuy = scope.state.store.mercadobitcoin.length > 0 ? "MERCADO BITCOIN: Buy rate: $"+scope.state.store.mercadobitcoin["0"].ticker.buy+"" : " no data";
@@ -78,7 +78,7 @@ const getState = (scope) => {
                         case "Brazil":*/
                             
                     default:
-                        return "No Data";
+                        return " ";
                 }
                 
                 /*return scope.state.store.gemini.length > 0 ? scope.state.store.gemini["0"].ask+"" : " no data";/*.map((item, index) => {
