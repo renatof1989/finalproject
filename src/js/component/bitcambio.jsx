@@ -13,7 +13,7 @@ function Bitcambio (props){
                             store.bitcambio.map((item, index) => {
                              
                               return (<div key={index}>
-                                  <p><strong>Bitcambio</strong></p>
+                                  <a href="https://bitcambio.com"><strong>Bitcambio</strong></a>
                                   <p>R${item.last}</p>
                               </div>);
                             })

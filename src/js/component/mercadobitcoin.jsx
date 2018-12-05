@@ -12,7 +12,7 @@ function Mercadobitcoin (props){
                         return(
                             store.mercadobitcoin.map((item, index) => {
                               return (<div key={index}>
-                                  <p><strong>Mercado Bitcoin</strong></p>
+                                  <a href="https://www.mercadobitcoin.com"><strong>Mercado Bitcoin</strong></a>
                                   <p>R${item.ticker.last}</p>
                               </div>);
                             })

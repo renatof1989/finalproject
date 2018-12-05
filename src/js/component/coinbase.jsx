@@ -13,7 +13,7 @@ function Coinbase(props){
                             store.coinbase.map((item, index) => {
                              
                               return (<div key={index}>
-                                  <p><strong>Coinbase</strong></p>
+                                  <a href="https://www.coinbase.com"><strong>Coinbase</strong></a>
                                   <p>${item.price}</p>
                               </div>);
                             })

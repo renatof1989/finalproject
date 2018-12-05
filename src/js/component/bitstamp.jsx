@@ -13,7 +13,7 @@ function Bitstamp (props){
                             store.bitstamp.map((item, index) => {
                              
                               return (<div key={index}>
-                                  <p><strong>Bitstamp</strong></p>
+                                  <a href="https://www.bitstamp.net"><strong>Bitstamp</strong></a>
                                   <p>€{item.last}</p>
                               </div>);
                             })

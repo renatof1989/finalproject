@@ -11,7 +11,7 @@ function Negociecoins(props){
                         return(
                             store.negociecoins.map((item, index) => {
                               return (<div key={index}>
-                                  <p><strong>Negocie Coins</strong></p>
+                                  <a href="https://www.negociecoins.com"><strong>Negocie Coins</strong></a>
                                   <p>R${item.last}</p>
                               </div>);
                             })

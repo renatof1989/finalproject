@@ -13,7 +13,7 @@ function Gemini(props){
                             store.gemini.map((item, index) => {
                              
                               return (<div key={index}>
-                                  <p><strong>Gemini</strong></p>
+                                  <a href="https://gemini.com/"><strong>Gemini</strong></a>
                                   <p>${item.last}</p>
                               </div>);
                             })
