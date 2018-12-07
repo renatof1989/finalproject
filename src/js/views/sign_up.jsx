@@ -4,42 +4,42 @@ import '../../styles/sign_up.css';
 
 export class Sign_up extends React.Component{
   render(){
-    return(<div class ="pic1 container-fluid">
-        <main class="my-form">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-md-8">
-                        <div class="card">
-                            <div class="card-header">Register</div>
-                            <div class="card-body">
+    return(<div className ="pic1 container-fluid">
+        <main className="my-form">
+            <div className="container">
+                <div className="row justify-content-center">
+                    <div className="col-md-8">
+                        <div className="card">
+                            <div className="card-header">Register</div>
+                            <div className="card-body">
                                 <form name="my-form" onsubmit="return validform()" action="success.php" method="">
-                                    <div class="form-group row">
-                                        <label for="full_name" class="col-md-4 col-form-label text-md-right">Full Name</label>
-                                        <div class="col-md-6">
-                                            <input type="text" id="full_name" class="form-control" name="full-name"/>
+                                    <div className="form-group row">
+                                        <label for="full_name" className="col-md-4 col-form-label text-md-right">Full Name</label>
+                                        <div className="col-md-6">
+                                            <input type="text" id="full_name" className="form-control" name="full-name"/>
                                         </div>
                                     </div>
     
-                                    <div class="form-group row">
-                                        <label for="email_address" class="col-md-4 col-form-label text-md-right">E-Mail Address</label>
-                                        <div class="col-md-6">
-                                            <input type="text" id="email_address" class="form-control" name="email-address"/>
+                                    <div className="form-group row">
+                                        <label for="email_address" className="col-md-4 col-form-label text-md-right">E-Mail Address</label>
+                                        <div className="col-md-6">
+                                            <input type="text" id="email_address" className="form-control" name="email-address"/>
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="user_name" class="col-md-4 col-form-label text-md-right">User Name</label>
-                                        <div class="col-md-6">
-                                            <input type="text" id="user_name" class="form-control" name="username"/>
+                                    <div className="form-group row">
+                                        <label for="user_name" className="col-md-4 col-form-label text-md-right">User Name</label>
+                                        <div className="col-md-6">
+                                            <input type="text" id="user_name" className="form-control" name="username"/>
                                         </div>
                                     </div>                                    
-                                    <div class="form-group row">
-                                        <label for="exampleInputPassword1" class="col-md-4 col-form-label text-md-right">Password</label>
-                                        <div class="col-md-6">
-                                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password"/>
+                                    <div className="form-group row">
+                                        <label for="exampleInputPassword1" className="col-md-4 col-form-label text-md-right">Password</label>
+                                        <div className="col-md-6">
+                                            <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
+                                    <div className="col-md-6 offset-md-4">
+                                        <button type="submit" className="btn btn-primary">
                                             Register
                                             </button>
                                     </div>

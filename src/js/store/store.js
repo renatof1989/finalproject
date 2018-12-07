@@ -16,7 +16,7 @@ const getState = (scope) => {
             braziliex:[],
         
             session:{
-                username:'Rigo',
+                username:'Joe',
                 password: "password",
                 loggedIn: false,
                 user:  {name: "Joe Shmo",
